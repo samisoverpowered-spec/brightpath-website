@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Confirmed! — BrightPath English</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="thankyou.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+</head>
+<body class="ty-page">
+
+  <!-- Minimal nav -->
+  <header class="ty-navbar">
+    <div class="container ty-nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">BrightPath<span class="logo-accent"> English</span></span>
+      </a>
+      <a href="mailto:hello@brightpathenglish.com" class="ty-help-link">Need help?</a>
+    </div>
+  </header>
+
+  <main class="ty-main">
+
+    <!-- TOP CONFETTI SHAPES -->
+    <div class="ty-confetti" aria-hidden="true">
+      <div class="conf conf-1"></div>
+      <div class="conf conf-2"></div>
+      <div class="conf conf-3"></div>
+      <div class="conf conf-4"></div>
+      <div class="conf conf-5"></div>
+      <div class="conf conf-6"></div>
+    </div>
+
+    <div class="container ty-container">
+
+      <!-- SUCCESS HEADER -->
+      <div class="ty-header">
+        <div class="ty-check-wrap">
+          <div class="ty-check-ring ty-ring-1"></div>
+          <div class="ty-check-ring ty-ring-2"></div>
+          <div class="ty-check-icon">✓</div>
+        </div>
+        <h1 class="ty-title">Payment confirmed!</h1>
+        <p class="ty-subtitle" id="ty-subtitle">Your tutoring session is booked and ready to go.</p>
+      </div>
+
+      <!-- ORDER SUMMARY (populated by JS) -->
+      <div class="ty-summary" id="ty-summary">
+        <div class="ty-summary-loading">
+          <div class="ty-skeleton ty-skeleton-line" style="width:60%;margin:0 auto 10px;"></div>
+          <div class="ty-skeleton ty-skeleton-line" style="width:40%;margin:0 auto;"></div>
+        </div>
+      </div>
+
+      <!-- NEXT STEPS -->
+      <div class="ty-next-steps">
+        <div class="ty-step ty-step-done">
+          <div class="ty-step-dot done">✓</div>
+          <div><strong>Payment received</strong><span>Your card has been charged · Confirmation email sent</span></div>
+        </div>
+        <div class="ty-step-line done"></div>
+        <div class="ty-step ty-step-active">
+          <div class="ty-step-dot active">2</div>
+          <div><strong>Schedule your session</strong><span>Pick a date and time below using the calendar</span></div>
+        </div>
+        <div class="ty-step-line"></div>
+        <div class="ty-step">
+          <div class="ty-step-dot">3</div>
+          <div><strong>Get your Zoom link</strong><span>We'll email your meeting link before the session</span></div>
+        </div>
+      </div>
+
+      <!-- CALENDLY EMBED -->
+      <div class="ty-calendly-section">
+        <h2 class="ty-calendly-title">Now, pick your session time</h2>
+        <p class="ty-calendly-sub">Choose a date and time that works for you. Slots are available 7 days a week.</p>
+        <div class="ty-calendly-wrap">
+          <div
+            class="calendly-inline-widget"
+            id="calendly-embed"
+            data-url="CALENDLY_URL_PLACEHOLDER"
+            style="min-width:320px; height:700px;"
+          ></div>
+        </div>
+      </div>
+
+      <!-- WHAT TO EXPECT -->
+      <div class="ty-expect">
+        <h2>What to expect</h2>
+        <div class="ty-expect-grid">
+          <div class="ty-expect-card">
+            <span class="ty-expect-icon">✉️</span>
+            <h3>Confirmation email</h3>
+            <p>Check your inbox — a receipt and booking details have been sent to your email address.</p>
+          </div>
+          <div class="ty-expect-card">
+            <span class="ty-expect-icon">📅</span>
+            <h3>Calendar invite</h3>
+            <p>After scheduling above, you'll receive a calendar invite with your session details and meeting link.</p>
+          </div>
+          <div class="ty-expect-card">
+            <span class="ty-expect-icon">🎯</span>
+            <h3>Come prepared</h3>
+            <p>Think about what you'd like to focus on. Bring any assignments, questions, or goals to your first session.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ty-footer-links">
+        <a href="index.html" class="btn btn-outline">← Back to Home</a>
+        <a href="book.html" class="btn btn-primary">Book Another Session</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Calendly widget script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="thankyou.js"></script>
+</body>
+</html>

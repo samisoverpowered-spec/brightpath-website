@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — BrightPath English</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pricing.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">BrightPath<span class="logo-accent"> English</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#tutors">Tutors</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="index.html#testimonials">Reviews</a>
+        <a href="book.html" class="btn btn-nav">Book a Lesson</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#tutors">Tutors</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#testimonials">Reviews</a>
+      <a href="book.html">Book a Lesson</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pricing-hero">
+    <div class="pricing-hero-shapes">
+      <div class="ph-shape ph-shape-1"></div>
+      <div class="ph-shape ph-shape-2"></div>
+    </div>
+    <div class="container pricing-hero-inner">
+      <div class="section-tag">Transparent Pricing</div>
+      <h1 class="pricing-hero-title">Simple pricing.<br /><em>No hidden fees.</em></h1>
+      <p class="pricing-hero-sub">Pay per session or save with a bundle. All sessions are 60 minutes, 1-on-1 with an expert tutor. Cancel or reschedule anytime.</p>
+    </div>
+  </section>
+
+  <!-- PRICING CARDS -->
+  <section class="pricing-cards-section">
+    <div class="container">
+      <div class="pricing-grid">
+
+        <!-- Single Session -->
+        <div class="pricing-card" id="card-single">
+          <div class="pricing-card-header">
+            <span class="pricing-card-tag">Pay as you go</span>
+            <h2 class="pricing-card-name">Single Session</h2>
+            <div class="pricing-price">
+              <span class="price-currency">CA$</span>
+              <span class="price-amount">30</span>
+              <span class="price-period">/ session</span>
+            </div>
+            <p class="pricing-card-desc">Perfect for trying BrightPath or for students who need occasional support.</p>
+          </div>
+          <ul class="pricing-features-list">
+            <li><span class="pf-check">✓</span> 60-minute 1-on-1 live session</li>
+            <li><span class="pf-check">✓</span> Choose any available tutor</li>
+            <li><span class="pf-check">✓</span> Session notes & homework sent after</li>
+            <li><span class="pf-check">✓</span> Reschedule up to 24 hrs before</li>
+            <li><span class="pf-check">✓</span> Zoom or Google Meet</li>
+            <li class="pf-muted"><span class="pf-dash">–</span> No long-term commitment</li>
+          </ul>
+          <a href="book.html?pkg=single" class="btn btn-outline btn-full pricing-btn">Book a Single Session</a>
+        </div>
+
+        <!-- Bundle — featured -->
+        <div class="pricing-card pricing-card-featured" id="card-bundle">
+          <div class="pricing-card-badge">Best Value — Save $20</div>
+          <div class="pricing-card-header">
+            <span class="pricing-card-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.9);">Bundle & save</span>
+            <h2 class="pricing-card-name">5-Session Bundle</h2>
+            <div class="pricing-price">
+              <span class="price-currency">CA$</span>
+              <span class="price-amount">130</span>
+              <span class="price-period">/ 5 sessions</span>
+            </div>
+            <p class="pricing-card-per">That's <strong>$26 per session</strong> — 13% off</p>
+            <p class="pricing-card-desc">Our most popular option for students working toward a consistent goal.</p>
+          </div>
+          <ul class="pricing-features-list">
+            <li><span class="pf-check pf-check-light">✓</span> 5 × 60-minute 1-on-1 sessions</li>
+            <li><span class="pf-check pf-check-light">✓</span> Same tutor every session (consistency)</li>
+            <li><span class="pf-check pf-check-light">✓</span> Personalised learning plan included</li>
+            <li><span class="pf-check pf-check-light">✓</span> Session notes & homework every time</li>
+            <li><span class="pf-check pf-check-light">✓</span> Progress report after session 5</li>
+            <li><span class="pf-check pf-check-light">✓</span> Priority scheduling slots</li>
+          </ul>
+          <a href="book.html?pkg=bundle" class="btn btn-primary-light btn-full pricing-btn">Get the 5-Session Bundle</a>
+          <p class="pricing-card-note">Sessions valid for 3 months from purchase</p>
+        </div>
+
+      </div>
+
+      <p class="pricing-note">All prices in Canadian dollars (CAD) · Secure payment via Stripe · Instant email confirmation</p>
+
+      <!-- Free trial -->
+      <div class="free-trial-banner">
+        <div class="ftb-icon">🎁</div>
+        <div class="ftb-content">
+          <strong>Not sure yet? Try us free first.</strong>
+          <p>Book a free 30-minute trial session — no payment required. Just fill in our contact form and we'll match you with a tutor.</p>
+        </div>
+        <a href="index.html#contact" class="btn btn-outline ftb-btn">Book Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="included-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Every Session</div>
+        <h2 class="section-title">What's always <em>included</em></h2>
+        <p class="section-subtitle">No matter which package you choose, every BrightPath session comes fully equipped.</p>
+      </div>
+      <div class="included-grid">
+        <div class="included-card">
+          <div class="included-icon">🎯</div>
+          <h3>Personalised Focus</h3>
+          <p>Every session is tailored to your goals, level, and the specific challenges you're working through.</p>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">📝</div>
+          <h3>Session Notes</h3>
+          <p>A written summary of what was covered, key corrections, and vocabulary is emailed to you after every lesson.</p>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">📚</div>
+          <h3>Homework & Resources</h3>
+          <p>Practice materials, exercises, and reading resources sent after each session to reinforce your learning.</p>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">💬</div>
+          <h3>Tutor Messaging</h3>
+          <p>Ask your tutor questions between sessions. We're here to help even outside of scheduled lesson time.</p>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🔄</div>
+          <h3>Flexible Rescheduling</h3>
+          <p>Life happens. Reschedule or cancel any session up to 24 hours in advance, no penalty.</p>
+        </div>
+        <div class="included-card">
+          <div class="included-icon">🏆</div>
+          <h3>Expert Tutors</h3>
+          <p>All tutors hold CELTA/DELTA qualifications and have years of experience with international students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section section" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Common <em>Questions</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I schedule my session after paying?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>After your payment is confirmed, you'll be taken to a booking page where you can pick your preferred date and time using our Calendly calendar. You'll also receive a confirmation email with a scheduling link.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens if I need to cancel?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can reschedule or cancel any session up to 24 hours before your scheduled time at no charge. Cancellations within 24 hours may forfeit that session. Bundle sessions never expire and can always be rescheduled.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Do bundle sessions expire?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>5-session bundles are valid for 3 months from the date of purchase. If you need more time, just reach out and we'll extend your expiry date.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I choose my tutor?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! After payment you'll see available time slots for each of our tutors. For bundle packages, we recommend sticking with the same tutor for consistency, but you can switch if needed.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What platform are sessions held on?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sessions are held via Zoom or Google Meet. A link will be sent to your email before every session. All you need is a device with a camera and microphone.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is my payment secure?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. All payments are processed by Stripe — a world-leading payment platform used by millions of businesses. We never store your card details on our servers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="pricing-cta-section">
+    <div class="pricing-cta-shapes">
+      <div class="pcs-shape pcs-shape-1"></div>
+      <div class="pcs-shape pcs-shape-2"></div>
+    </div>
+    <div class="container pricing-cta-inner">
+      <h2>Ready to start?</h2>
+      <p>Pick your session below and you'll be learning within 24 hours.</p>
+      <div class="pricing-cta-btns">
+        <a href="book.html?pkg=bundle" class="btn btn-primary">Get 5 Sessions — CA$130</a>
+        <a href="book.html?pkg=single" class="btn btn-ghost">Book Single Session — CA$30</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">BrightPath<span class="logo-accent"> English</span></span>
+        </a>
+        <p>Personalised English tutoring for international students, wherever you are in the world.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="index.html#services">Academic Writing</a>
+          <a href="index.html#services">IELTS / TOEFL Prep</a>
+          <a href="index.html#services">Business English</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="pricing.html">Pricing</a>
+          <a href="book.html">Book a Lesson</a>
+          <a href="index.html#tutors">Meet Our Tutors</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@brightpathenglish.com">hello@brightpathenglish.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 BrightPath English. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pricing.js"></script>
+</body>
+</html>
