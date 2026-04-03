@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started — BrightPath English</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="signup-page">
+
+  <!-- ===================== BACK LINK ===================== -->
+  <a href="index.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+    Back to BrightPath
+  </a>
+
+  <div class="signup-layout">
+
+    <!-- ===================== LEFT PANEL ===================== -->
+    <div class="signup-left">
+      <div class="signup-left-inner">
+
+        <div class="signup-brand">
+          <span class="logo-icon">✦</span>
+          <span class="logo-text">BrightPath<span class="logo-accent"> English</span></span>
+        </div>
+
+        <div class="signup-headline">
+          <h1>Start your<br /><em>English journey</em><br />today.</h1>
+          <p>Join 500+ international students already learning with BrightPath. Create your free account and book your first lesson.</p>
+        </div>
+
+        <ul class="signup-perks">
+          <li>
+            <div class="perk-icon">✓</div>
+            <div>
+              <strong>Free 30-min trial lesson</strong>
+              <span>No credit card required to get started</span>
+            </div>
+          </li>
+          <li>
+            <div class="perk-icon">✓</div>
+            <div>
+              <strong>Matched with the right tutor</strong>
+              <span>We pair you based on your goals and level</span>
+            </div>
+          </li>
+          <li>
+            <div class="perk-icon">✓</div>
+            <div>
+              <strong>Flexible scheduling</strong>
+              <span>Sessions 7 days a week, any timezone</span>
+            </div>
+          </li>
+          <li>
+            <div class="perk-icon">✓</div>
+            <div>
+              <strong>Progress tracking included</strong>
+              <span>See your improvement with every session</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="signup-testimonial">
+          <div class="sig-test-avatar" style="background: linear-gradient(135deg,#667eea,#764ba2);">Y</div>
+          <div class="sig-test-body">
+            <p>"I went from failing my essays to getting Distinctions. BrightPath changed everything."</p>
+            <span>Yuki T. — Masters Student, Melbourne 🇯🇵</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Decorative blobs -->
+      <div class="left-blob left-blob-1"></div>
+      <div class="left-blob left-blob-2"></div>
+    </div>
+
+    <!-- ===================== RIGHT PANEL ===================== -->
+    <div class="signup-right">
+      <div class="signup-form-container">
+
+        <div class="signup-form-header">
+          <h2>Create your account</h2>
+          <p>Already have an account? <a href="#">Sign in</a></p>
+        </div>
+
+        <div class="step-indicators">
+          <div class="step-ind active" data-step="1">
+            <span class="step-ind-num">1</span>
+            <span class="step-ind-label">About You</span>
+          </div>
+          <div class="step-ind-line"></div>
+          <div class="step-ind" data-step="2">
+            <span class="step-ind-num">2</span>
+            <span class="step-ind-label">Your Goals</span>
+          </div>
+          <div class="step-ind-line"></div>
+          <div class="step-ind" data-step="3">
+            <span class="step-ind-num">3</span>
+            <span class="step-ind-label">Preferences</span>
+          </div>
+        </div>
+
+        <form id="signup-form" novalidate>
+
+          <!-- Step 1 -->
+          <div class="form-step active" id="step-1">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="su-first">First Name *</label>
+                <input type="text" id="su-first" placeholder="e.g. Yuki" required />
+                <span class="form-error" id="su-first-err"></span>
+              </div>
+              <div class="form-group">
+                <label for="su-last">Last Name *</label>
+                <input type="text" id="su-last" placeholder="e.g. Tanaka" required />
+                <span class="form-error" id="su-last-err"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="su-email">Email Address *</label>
+              <input type="email" id="su-email" placeholder="your@email.com" required />
+              <span class="form-error" id="su-email-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="su-password">Create a Password *</label>
+              <div class="password-wrap">
+                <input type="password" id="su-password" placeholder="Min. 8 characters" required />
+                <button type="button" class="toggle-pw" id="toggle-pw" aria-label="Toggle password visibility">
+                  <svg id="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="pw-strength" id="pw-strength">
+                <div class="pw-bar"><div class="pw-fill" id="pw-fill"></div></div>
+                <span id="pw-label">Strength</span>
+              </div>
+              <span class="form-error" id="su-pw-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="su-country">Country *</label>
+              <select id="su-country" required>
+                <option value="">Select your country…</option>
+                <option>Japan</option>
+                <option>South Korea</option>
+                <option>China</option>
+                <option>Vietnam</option>
+                <option>Brazil</option>
+                <option>Saudi Arabia</option>
+                <option>Turkey</option>
+                <option>Indonesia</option>
+                <option>India</option>
+                <option>Thailand</option>
+                <option>Colombia</option>
+                <option>Other</option>
+              </select>
+              <span class="form-error" id="su-country-err"></span>
+            </div>
+            <button type="button" class="btn btn-primary btn-full" id="next-1">
+              Continue <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" id="step-2">
+            <div class="form-group">
+              <label for="su-level">Current English Level *</label>
+              <select id="su-level" required>
+                <option value="">Select your level…</option>
+                <option>Beginner (A1–A2)</option>
+                <option>Elementary (A2–B1)</option>
+                <option>Intermediate (B1–B2)</option>
+                <option>Upper-Intermediate (B2)</option>
+                <option>Advanced (C1)</option>
+                <option>Proficient (C2)</option>
+              </select>
+              <span class="form-error" id="su-level-err"></span>
+            </div>
+            <div class="form-group">
+              <label>Main Goal *</label>
+              <div class="goal-grid" id="goal-grid">
+                <label class="goal-card">
+                  <input type="radio" name="goal" value="academic" />
+                  <span class="goal-icon">✍️</span>
+                  <span class="goal-label">Academic Writing</span>
+                </label>
+                <label class="goal-card">
+                  <input type="radio" name="goal" value="ielts" />
+                  <span class="goal-icon">📋</span>
+                  <span class="goal-label">IELTS / TOEFL</span>
+                </label>
+                <label class="goal-card">
+                  <input type="radio" name="goal" value="conversation" />
+                  <span class="goal-icon">🗣️</span>
+                  <span class="goal-label">Conversation</span>
+                </label>
+                <label class="goal-card">
+                  <input type="radio" name="goal" value="business" />
+                  <span class="goal-icon">💼</span>
+                  <span class="goal-label">Business English</span>
+                </label>
+                <label class="goal-card">
+                  <input type="radio" name="goal" value="general" />
+                  <span class="goal-icon">📚</span>
+                  <span class="goal-label">General English</span>
+                </label>
+                <label class="goal-card">
+                  <input type="radio" name="goal" value="other" />
+                  <span class="goal-icon">💡</span>
+                  <span class="goal-label">Not Sure Yet</span>
+                </label>
+              </div>
+              <span class="form-error" id="su-goal-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="su-target">Tell us more about your goals</label>
+              <textarea id="su-target" rows="3" placeholder="e.g. I need to improve my IELTS writing from 6.0 to 7.0 for my visa application in 3 months…"></textarea>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-outline" id="back-1">← Back</button>
+              <button type="button" class="btn btn-primary" id="next-2">Continue →</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" id="step-3">
+            <div class="form-group">
+              <label>Preferred Session Frequency</label>
+              <div class="freq-options">
+                <label class="freq-card"><input type="radio" name="freq" value="1x" checked /><span>1× / week</span></label>
+                <label class="freq-card"><input type="radio" name="freq" value="2x" /><span>2× / week</span></label>
+                <label class="freq-card"><input type="radio" name="freq" value="3x" /><span>3× / week</span></label>
+                <label class="freq-card"><input type="radio" name="freq" value="flex" /><span>Flexible</span></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="su-timezone">Your Timezone</label>
+              <select id="su-timezone">
+                <option value="">Select timezone…</option>
+                <option>UTC+09:00 — Japan / Korea</option>
+                <option>UTC+08:00 — China / Singapore</option>
+                <option>UTC+07:00 — Vietnam / Thailand</option>
+                <option>UTC+05:30 — India</option>
+                <option>UTC+03:00 — Saudi Arabia / Turkey</option>
+                <option>UTC-03:00 — Brazil</option>
+                <option>UTC+10:00 — Sydney (AEST)</option>
+                <option>UTC+00:00 — UK / GMT</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>How did you hear about us?</label>
+              <select id="su-source">
+                <option value="">Select one…</option>
+                <option>Friend / classmate recommendation</option>
+                <option>Google search</option>
+                <option>Instagram / TikTok</option>
+                <option>University notice board</option>
+                <option>Facebook group</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="su-terms" required />
+                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *</span>
+              </label>
+              <span class="form-error" id="su-terms-err"></span>
+            </div>
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="su-marketing" />
+                <span>Send me tips, resources, and updates about BrightPath</span>
+              </label>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-outline" id="back-2">← Back</button>
+              <button type="submit" class="btn btn-primary" id="su-submit">
+                <span class="btn-text">Create My Account ✦</span>
+                <span class="btn-loading" style="display:none;">Creating account…</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Success -->
+        <div class="signup-success" id="signup-success" style="display:none;">
+          <div class="success-burst">
+            <div class="burst-ring burst-ring-1"></div>
+            <div class="burst-ring burst-ring-2"></div>
+            <div class="success-check">✦</div>
+          </div>
+          <h3>Welcome to BrightPath!</h3>
+          <p>Your account has been created. We'll email you within 24 hours to confirm your free trial lesson. Get ready to shine!</p>
+          <a href="index.html" class="btn btn-primary" style="margin-top:24px;">Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
