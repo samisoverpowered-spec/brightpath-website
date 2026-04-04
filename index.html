@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <script src="darkmode.js"></script>
 
   <!-- ===================== NAVIGATION ===================== -->
   <header class="navbar" id="navbar">
@@ -25,6 +26,10 @@
         <a href="#testimonials">Reviews</a>
         <a href="book.html" class="btn btn-nav">Book a Lesson</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,6 +45,7 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="home">
+    <div class="hero-particles" id="hero-particles"></div>
     <div class="hero-bg-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -108,7 +114,7 @@
               </div>
               <div class="participant">
                 <div class="part-avatar" style="background: linear-gradient(135deg,#06b6d4,#0891b2);">Y</div>
-                <div class="part-info"><span class="part-name">Yuki</span><span class="part-role">Student</span></div>
+                <div class="part-info"><span class="part-name">Hong</span><span class="part-role">Student</span></div>
               </div>
             </div>
           </div>
@@ -138,11 +144,20 @@
     </div>
   </section>
 
+  <div class="scroll-indicator" id="scroll-indicator">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-arrow">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v14M4 11l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+
   <!-- ===================== TRUST BAR ===================== -->
   <section class="trust-bar">
     <div class="container">
-      <p class="trust-label">Students from universities worldwide</p>
-      <div class="trust-logos">
+      <p class="trust-label">Trusted by students in <strong>15+ countries</strong> worldwide</p>
+    </div>
+    <div class="trust-marquee-wrap">
+      <div class="trust-marquee">
         <span class="trust-item">🇯🇵 Japan</span>
         <span class="trust-item">🇰🇷 South Korea</span>
         <span class="trust-item">🇨🇳 China</span>
@@ -151,6 +166,39 @@
         <span class="trust-item">🇸🇦 Saudi Arabia</span>
         <span class="trust-item">🇹🇷 Turkey</span>
         <span class="trust-item">🇮🇩 Indonesia</span>
+        <span class="trust-item">🇮🇳 India</span>
+        <span class="trust-item">🇹🇭 Thailand</span>
+        <span class="trust-item">🇲🇽 Mexico</span>
+        <span class="trust-item">🇨🇴 Colombia</span>
+        <span class="trust-item">🇵🇭 Philippines</span>
+        <span class="trust-item">🇳🇬 Nigeria</span>
+        <span class="trust-item">🇦🇪 UAE</span>
+        <span class="trust-item">🇵🇰 Pakistan</span>
+        <span class="trust-item">🇪🇬 Egypt</span>
+        <span class="trust-item">🇩🇪 Germany</span>
+        <span class="trust-item">🇫🇷 France</span>
+        <span class="trust-item">🇮🇹 Italy</span>
+        <!-- duplicate for seamless loop -->
+        <span class="trust-item">🇯🇵 Japan</span>
+        <span class="trust-item">🇰🇷 South Korea</span>
+        <span class="trust-item">🇨🇳 China</span>
+        <span class="trust-item">🇻🇳 Vietnam</span>
+        <span class="trust-item">🇧🇷 Brazil</span>
+        <span class="trust-item">🇸🇦 Saudi Arabia</span>
+        <span class="trust-item">🇹🇷 Turkey</span>
+        <span class="trust-item">🇮🇩 Indonesia</span>
+        <span class="trust-item">🇮🇳 India</span>
+        <span class="trust-item">🇹🇭 Thailand</span>
+        <span class="trust-item">🇲🇽 Mexico</span>
+        <span class="trust-item">🇨🇴 Colombia</span>
+        <span class="trust-item">🇵🇭 Philippines</span>
+        <span class="trust-item">🇳🇬 Nigeria</span>
+        <span class="trust-item">🇦🇪 UAE</span>
+        <span class="trust-item">🇵🇰 Pakistan</span>
+        <span class="trust-item">🇪🇬 Egypt</span>
+        <span class="trust-item">🇩🇪 Germany</span>
+        <span class="trust-item">🇫🇷 France</span>
+        <span class="trust-item">🇮🇹 Italy</span>
       </div>
     </div>
   </section>
@@ -165,7 +213,9 @@
       </div>
       <div class="services-grid">
         <div class="service-card featured">
-          <div class="service-icon">✍️</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
           <h3>Academic Writing</h3>
           <p>Master essays, reports, and research papers. Learn academic style, structure, and citation with expert guidance.</p>
           <ul class="service-features">
@@ -177,7 +227,9 @@
           <div class="service-badge">Most Popular</div>
         </div>
         <div class="service-card">
-          <div class="service-icon">🗣️</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
+          </div>
           <h3>Conversation & Fluency</h3>
           <p>Build confidence speaking English in everyday and professional situations through engaging, real-world practice.</p>
           <ul class="service-features">
@@ -188,7 +240,9 @@
           <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">📋</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M5 4h-.5A2.5 2.5 0 0 0 2 6.5v13A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 19.5 4H19"/><path d="M9 12h6M9 16h4"/></svg>
+          </div>
           <h3>IELTS / TOEFL Prep</h3>
           <p>Targeted exam preparation with proven strategies to maximise your score across all four skills.</p>
           <ul class="service-features">
@@ -199,7 +253,9 @@
           <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">💼</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M2 12h20"/></svg>
+          </div>
           <h3>Business English</h3>
           <p>Communicate professionally in meetings, emails, and presentations. Ideal for students entering the workforce.</p>
           <ul class="service-features">
@@ -210,7 +266,9 @@
           <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">📚</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="10" y1="11" x2="16" y2="11"/></svg>
+          </div>
           <h3>General English</h3>
           <p>A flexible programme covering all aspects of English for students at any level, from beginner to advanced.</p>
           <ul class="service-features">
@@ -221,7 +279,9 @@
           <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">🖊️</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M8 12h.01"/></svg>
+          </div>
           <h3>Assignment Feedback</h3>
           <p>Get detailed, constructive feedback on your submitted work to improve your understanding and grades.</p>
           <ul class="service-features">
@@ -280,76 +340,100 @@
     </div>
   </section>
 
-  <!-- ===================== TUTORS ===================== -->
+  <!-- ===================== CURRICULUM ===================== -->
   <section class="tutors section" id="tutors">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Meet the Team</div>
-        <h2 class="section-title">Expert Tutors Who<br /><em>Genuinely Care</em></h2>
-        <p class="section-subtitle">All BrightPath tutors hold CELTA/DELTA qualifications and have extensive experience working with international students.</p>
+        <div class="section-tag">The BrightPath Method</div>
+        <h2 class="section-title">A structured curriculum,<br /><em>built for results.</em></h2>
+        <p class="section-subtitle">Unlike general tutoring, BrightPath follows a purpose-built curriculum designed to move students through clear, measurable stages — from foundational skills to confident, independent English use.</p>
       </div>
-      <div class="tutors-grid">
+
+      <div class="curriculum-grid">
+        <div class="curriculum-card">
+          <div class="curriculum-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="10" y1="11" x2="16" y2="11"/></svg>
+          </div>
+          <div class="curriculum-num">01</div>
+          <h3>Language Foundations</h3>
+          <p>Grammar, sentence structure, and vocabulary built systematically — ensuring every student has a solid base before advancing.</p>
+        </div>
+        <div class="curriculum-card">
+          <div class="curriculum-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <div class="curriculum-num">02</div>
+          <h3>Academic Writing</h3>
+          <p>Essay structure, argumentation, and academic style — the skills that directly impact grades in school and university.</p>
+        </div>
+        <div class="curriculum-card">
+          <div class="curriculum-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="curriculum-num">03</div>
+          <h3>Reading & Analysis</h3>
+          <p>Critical reading, comprehension strategies, and analytical thinking — so students can engage with complex texts confidently.</p>
+        </div>
+        <div class="curriculum-card">
+          <div class="curriculum-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
+          </div>
+          <div class="curriculum-num">04</div>
+          <h3>Oral Communication</h3>
+          <p>Pronunciation, spoken fluency, and presentation skills — building the confidence to speak clearly in any situation.</p>
+        </div>
+        <div class="curriculum-card">
+          <div class="curriculum-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M5 4h-.5A2.5 2.5 0 0 0 2 6.5v13A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 19.5 4H19"/><path d="M9 12h6M9 16h4"/></svg>
+          </div>
+          <div class="curriculum-num">05</div>
+          <h3>Exam Preparation</h3>
+          <p>Targeted IELTS and TOEFL strategies, timed practice, and examiner-aware feedback — built into the curriculum, not bolted on.</p>
+        </div>
+        <div class="curriculum-card">
+          <div class="curriculum-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="curriculum-num">06</div>
+          <h3>Applied & Professional English</h3>
+          <p>Business writing, professional communication, and real-world English — for students preparing to enter the workforce.</p>
+        </div>
+      </div>
+
+      <div class="curriculum-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        The BrightPath curriculum is actively being developed and refined. Each student's programme is personalised to their level and goals within this framework.
+      </div>
+
+      <div class="section-header" style="margin-top: 80px; margin-bottom: 36px;">
+        <div class="section-tag">Our Instructor</div>
+        <h2 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem);">Who delivers <em>the curriculum</em></h2>
+      </div>
+      <div class="tutors-grid" style="max-width: 520px; margin: 0 auto; grid-template-columns: 1fr;">
         <div class="tutor-card">
-          <div class="tutor-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-            <span>SE</span>
+          <div class="tutor-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <span>CQ</span>
           </div>
           <div class="tutor-info">
-            <h3>Sarah Ellis</h3>
-            <p class="tutor-role">Academic Writing Specialist</p>
-            <p class="tutor-bio">Former university writing centre lecturer with 10+ years helping international students succeed in higher education. Specialises in humanities and social sciences.</p>
+            <h3>Charlie Quan</h3>
+            <p class="tutor-role">Academic Writing & Essay Specialist</p>
+            <p class="tutor-bio">Charlie is a high-achieving academic with a genuine passion for English writing. Known for exceptional essay work and deep knowledge of the humanities, he brings clarity and enthusiasm to every session — breaking down complex writing techniques into steps students can immediately use.</p>
             <div class="tutor-tags">
               <span class="tag">Academic Writing</span>
-              <span class="tag">IELTS</span>
-              <span class="tag">Literature</span>
+              <span class="tag">Essay Craft</span>
+              <span class="tag">Grammar</span>
             </div>
             <div class="tutor-meta">
-              <span>⭐ 4.9 (128 reviews)</span>
-              <span>🎓 DELTA Certified</span>
-            </div>
-          </div>
-        </div>
-        <div class="tutor-card">
-          <div class="tutor-avatar" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
-            <span>JM</span>
-          </div>
-          <div class="tutor-info">
-            <h3>James Mitchell</h3>
-            <p class="tutor-role">Conversation & Business English</p>
-            <p class="tutor-bio">Ex-corporate trainer turned English tutor with a passion for building student confidence. Taught in Japan, South Korea, and Australia over 8 years.</p>
-            <div class="tutor-tags">
-              <span class="tag">Business English</span>
-              <span class="tag">Fluency</span>
-              <span class="tag">Pronunciation</span>
-            </div>
-            <div class="tutor-meta">
-              <span>⭐ 4.9 (97 reviews)</span>
-              <span>🎓 CELTA Certified</span>
-            </div>
-          </div>
-        </div>
-        <div class="tutor-card">
-          <div class="tutor-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-            <span>LC</span>
-          </div>
-          <div class="tutor-info">
-            <h3>Laura Chen</h3>
-            <p class="tutor-role">IELTS & TOEFL Expert</p>
-            <p class="tutor-bio">Former IELTS examiner with an unmatched understanding of what examiners look for. Has helped 200+ students achieve their target band scores.</p>
-            <div class="tutor-tags">
-              <span class="tag">IELTS</span>
-              <span class="tag">TOEFL</span>
-              <span class="tag">Exam Strategy</span>
-            </div>
-            <div class="tutor-meta">
-              <span>⭐ 5.0 (214 reviews)</span>
-              <span>🎓 Former IELTS Examiner</span>
+              <span>⭐ 5.0</span>
+              <span>✦ Top-Achieving Academic</span>
             </div>
           </div>
         </div>
       </div>
+
       <div class="tutors-cta">
-        <p>All tutors undergo a rigorous vetting process and ongoing professional development.</p>
-        <a href="#contact" class="btn btn-primary">Find Your Tutor</a>
+        <p>Sessions follow the BrightPath curriculum and are personalised to your level, goals, and timeline.</p>
+        <a href="#contact" class="btn btn-primary">Book a Free Trial</a>
       </div>
     </div>
   </section>
@@ -367,10 +451,10 @@
           <div class="quote-icon">"</div>
           <p class="testimonial-text">BrightPath completely changed how I approach academic writing. My grades went from Cs to As, and I finally feel confident submitting my assignments. Sarah understood exactly what I needed as a non-native speaker.</p>
           <div class="testimonial-author">
-            <div class="author-avatar" style="background: #667eea;">Y</div>
+            <div class="author-avatar" style="background: #667eea;">H</div>
             <div class="author-info">
-              <strong>Yuki Tanaka</strong>
-              <span>Masters Student, University of Melbourne 🇯🇵</span>
+              <strong>Hong Wang</strong>
+              <span>International Student</span>
             </div>
             <div class="stars">★★★★★</div>
           </div>
@@ -379,10 +463,10 @@
           <div class="quote-icon">"</div>
           <p class="testimonial-text">I needed a band 7.5 for my visa application. After 3 months with Laura, I scored 8.0. She knew every trick the examiners look for. Worth every cent.</p>
           <div class="testimonial-author">
-            <div class="author-avatar" style="background: #11998e;">M</div>
+            <div class="author-avatar" style="background: #11998e;">S</div>
             <div class="author-info">
-              <strong>Min-jun Lee</strong>
-              <span>IELTS Candidate 🇰🇷</span>
+              <strong>Sakura Deng</strong>
+              <span>English Language Student</span>
             </div>
             <div class="stars">★★★★★</div>
           </div>
@@ -391,10 +475,10 @@
           <div class="quote-icon">"</div>
           <p class="testimonial-text">James is incredible. My presentation skills improved so much that I got offered an internship at an Australian company. He gave me the confidence to speak up in meetings.</p>
           <div class="testimonial-author">
-            <div class="author-avatar" style="background: #f5576c;">A</div>
+            <div class="author-avatar" style="background: #f5576c;">S</div>
             <div class="author-info">
-              <strong>Ana Oliveira</strong>
-              <span>Business Student, QUT 🇧🇷</span>
+              <strong>Samia Cheng</strong>
+              <span>University Student</span>
             </div>
             <div class="stars">★★★★★</div>
           </div>
@@ -437,21 +521,21 @@
           <p>Your first 30-minute session is completely free — no credit card required. Just fill in the form and we'll be in touch within 24 hours to confirm your booking.</p>
           <div class="contact-points">
             <div class="contact-point">
-              <span class="contact-point-icon">🕐</span>
+              <span class="contact-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
               <div>
                 <strong>Flexible Scheduling</strong>
                 <p>Sessions available 7 days a week, including evenings and weekends (AEST).</p>
               </div>
             </div>
             <div class="contact-point">
-              <span class="contact-point-icon">💻</span>
+              <span class="contact-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
               <div>
                 <strong>100% Online</strong>
                 <p>Learn from anywhere in the world via Zoom or Google Meet.</p>
               </div>
             </div>
             <div class="contact-point">
-              <span class="contact-point-icon">✉️</span>
+              <span class="contact-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
               <div>
                 <strong>Quick Response</strong>
                 <p>We reply to all enquiries within 24 hours, usually much sooner.</p>
