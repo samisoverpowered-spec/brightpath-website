@@ -35,50 +35,20 @@ if (pkgParam === 'single') {
 }
 
 // ===================== STRIPE CHECKOUT =====================
-async function checkout(pkg) {
-  const btn          = document.getElementById(`pay-${pkg}`);
-  const btnText      = btn.querySelector('.pay-btn-text');
-  const btnLoading   = btn.querySelector('.pay-btn-loading');
-  const errorEl      = document.getElementById('payment-error');
-  const errorText    = document.getElementById('payment-error-text');
-
-  // Loading state
-  btnText.style.display    = 'none';
-  btnLoading.style.display = 'flex';
-  btn.disabled             = true;
-  if (errorEl) errorEl.style.display = 'none';
-
-  try {
-    const res = await fetch('/api/create-checkout-session', {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ package: pkg }),
-    });
-
-    if (!res.ok) {
-      const data = await res.json();
-      throw new Error(data.error || 'Server error');
-    }
-
-    const { url } = await res.json();
-    window.location.href = url;
-
-  } catch (err) {
-    console.error('Checkout error:', err);
-    btnText.style.display    = 'flex';
-    btnLoading.style.display = 'none';
-    btn.disabled             = false;
-
-    if (errorEl) {
-      errorText.textContent = `Payment error: ${err.message}. Please try again or contact hello@brightpathenglish.com`;
-      errorEl.style.display = 'flex';
-      errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+// Payments coming soon — redirect to contact form for now
+function checkout(pkg) {
+  const errorEl   = document.getElementById('payment-error');
+  const errorText = document.getElementById('payment-error-text');
+  if (errorEl && errorText) {
+    errorText.textContent = 'Online payments are coming soon! In the meantime, please book via our contact form and we\'ll arrange payment directly. Email: hello@brightpathenglish.com';
+    errorEl.style.display = 'flex';
+    errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }
 
 document.getElementById('pay-single')?.addEventListener('click', () => checkout('single'));
 document.getElementById('pay-bundle')?.addEventListener('click', () => checkout('bundle'));
+document.getElementById('pay-term')?.addEventListener('click', () => checkout('term'));
 
 // ===================== SCROLL ANIMATIONS =====================
 const observer = new IntersectionObserver((entries) => {
