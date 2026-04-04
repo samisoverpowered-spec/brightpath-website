@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <script src="darkmode.js"></script>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -26,6 +27,10 @@
         <a href="index.html#testimonials">Reviews</a>
         <a href="book.html" class="btn btn-nav">Book a Lesson</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -71,7 +76,7 @@
         </div>
         <div class="about-hero-badge">
           <span class="about-badge-icon">✦</span>
-          <span>Est. 2021 · Toronto, Canada</span>
+          <span>BrightPath English</span>
         </div>
       </div>
     </div>
@@ -89,17 +94,23 @@
       </div>
       <div class="mission-cards">
         <div class="mission-card">
-          <div class="mc-icon">🎯</div>
+          <div class="mc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
           <h3>Student-first</h3>
           <p>Every programme is built around the individual student's goals, level, and timeline — never a generic curriculum.</p>
         </div>
         <div class="mission-card">
-          <div class="mc-icon">🌏</div>
+          <div class="mc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
           <h3>Globally minded</h3>
           <p>Our tutors understand the unique challenges of studying and working in a second language, from cultural nuance to academic conventions.</p>
         </div>
         <div class="mission-card">
-          <div class="mc-icon">📈</div>
+          <div class="mc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
           <h3>Results driven</h3>
           <p>We measure our success by yours — improved grades, higher exam scores, and the confidence to communicate without hesitation.</p>
         </div>
@@ -121,7 +132,7 @@
           <div class="founder-photo-ring founder-ring-2"></div>
         </div>
         <div class="founder-quote-card">
-          <p>"I started BrightPath because I watched too many talented people stay silent in rooms where they deserved to be heard."</p>
+          <p>"I started BrightPath because I know what it's like to work hard and still feel like the system wasn't built for you. Every student deserves someone in their corner who actually gets it."</p>
           <span>— Sam Wang, Founder</span>
         </div>
       </div>
@@ -129,50 +140,50 @@
       <div class="founder-content">
         <div class="section-tag">Meet the Founder</div>
         <h2 class="section-title" style="text-align:left;">Sam Wang</h2>
-        <p class="founder-role-title">Founder & Director, BrightPath English</p>
+        <p class="founder-role-title">Founder, BrightPath English</p>
 
         <div class="founder-bio">
           <p>
-            Sam Wang is a Toronto-based educator, community advocate, and the founder of BrightPath English. With a background spanning non-profit programme management, adult literacy education, and community-based language support, Sam has spent the better part of a decade working at the intersection of education and social equity.
+            Sam Wang is a student, educator, and the founder of BrightPath English. Currently enrolled in the International Baccalaureate Diploma Programme — one of the most rigorous academic curricula in the world — Sam brings a rare perspective to tutoring: he knows exactly what it feels like to sit on the other side of the desk.
           </p>
           <p>
-            Before founding BrightPath, Sam worked as a programme coordinator at a Toronto-based non-profit focused on newcomer integration, where he managed English language workshops for adult immigrants and international students from over 20 countries. It was there he saw first-hand how profoundly language access shapes a person's ability to build a career, pursue higher education, and feel at home in a new country.
+            Sam's passion for teaching started young. He has been teaching piano for several years, working with students of varying ages and skill levels. That experience taught him something that no textbook could: how to read a student's frustration, break a difficult concept into something manageable, and build the kind of trust that makes learning actually stick.
           </p>
           <p>
-            Recognising a gap between generic ESL classes and the kind of targeted, personalised support that actually moves the needle, Sam launched BrightPath English in 2021 with a small team of specialist tutors and a clear mission: to give every international student a genuine path to English fluency — one that respects their intelligence, their time, and their goals.
+            Alongside his studies, Sam has volunteered and worked with tutoring-focused non-profit organisations, gaining hands-on experience supporting students who struggle to access quality academic help. Seeing how much of a difference the right guidance can make — and how little of it is available to those who need it most — is what drove him to build BrightPath.
           </p>
           <p>
-            Sam holds a Bachelor of Education from the University of Toronto and a Certificate in Non-Profit Management from Ryerson University. He is also a trained CELTA assessor and an active volunteer with several youth literacy organisations across the Greater Toronto Area.
+            BrightPath was founded on a straightforward idea: students deserve support from someone who genuinely gets it. Sam isn't a distant expert — he's someone navigating high-level academics himself, who cares deeply about making sure language never stands between a capable student and their potential.
           </p>
         </div>
 
         <div class="founder-credentials">
           <div class="credential">
-            <span class="cred-icon">🎓</span>
+            <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             <div>
-              <strong>B.Ed — University of Toronto</strong>
-              <span>Faculty of Education, Language & Literacy</span>
+              <strong>IB Diploma Programme</strong>
+              <span>International Baccalaureate — one of the world's most rigorous pre-university curricula</span>
             </div>
           </div>
           <div class="credential">
-            <span class="cred-icon">📜</span>
+            <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <div>
-              <strong>Certificate in Non-Profit Management</strong>
-              <span>Toronto Metropolitan University</span>
+              <strong>Non-Profit Tutoring Experience</strong>
+              <span>Hands-on work supporting students through educational non-profit organisations</span>
             </div>
           </div>
           <div class="credential">
-            <span class="cred-icon">🌐</span>
+            <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="16" rx="2"/><path d="M6 18v4M10 18v4M14 18v4M18 18v4"/><path d="M8 2v10M14 2v10"/></svg></span>
             <div>
-              <strong>CELTA Assessor & Trainer</strong>
-              <span>Cambridge Assessment English</span>
+              <strong>Piano Instructor</strong>
+              <span>Years of experience teaching students of all ages and skill levels</span>
             </div>
           </div>
           <div class="credential">
-            <span class="cred-icon">🤝</span>
+            <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><circle cx="12" cy="12" r="4"/></svg></span>
             <div>
-              <strong>Non-Profit Programme Coordinator</strong>
-              <span>8+ years in newcomer & community education</span>
+              <strong>Student Perspective</strong>
+              <span>Actively navigating high-level academics — bringing empathy and insight that only a fellow student can offer</span>
             </div>
           </div>
         </div>
@@ -181,49 +192,56 @@
     </div>
   </section>
 
-  <!-- ===================== TIMELINE ===================== -->
+  <!-- ===================== STUDENT JOURNEY ===================== -->
   <section class="timeline-section section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Our Journey</div>
-        <h2 class="section-title">How BrightPath <em>grew</em></h2>
+        <div class="section-tag">What to Expect</div>
+        <h2 class="section-title">Your journey with <em>BrightPath</em></h2>
+        <p class="section-subtitle">From your very first message to reaching your goals — here's exactly what working with us looks like.</p>
       </div>
-      <div class="timeline">
-        <div class="timeline-item tl-left">
-          <div class="tl-year">2021</div>
-          <div class="tl-card">
-            <h3>BrightPath Founded</h3>
-            <p>Sam launched BrightPath from Toronto with three tutors and a waiting list of 12 students. The first session was held on a Tuesday morning in March.</p>
+      <div class="journey-grid">
+
+        <div class="journey-card">
+          <div class="journey-step">01</div>
+          <div class="journey-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
           </div>
+          <h3>Book a Free Trial</h3>
+          <p>Start with a completely free 30-minute session. No payment, no commitment — just a chance to meet your tutor and see if BrightPath feels right for you.</p>
+          <div class="journey-tag">Free · No card needed</div>
         </div>
-        <div class="timeline-item tl-right">
-          <div class="tl-year">2022</div>
-          <div class="tl-card">
-            <h3>100 Students Milestone</h3>
-            <p>Word spread quickly through university communities. By the end of 2022, BrightPath had supported over 100 students across Canada and Australia, and expanded the tutor team to eight specialists.</p>
+
+        <div class="journey-card">
+          <div class="journey-step">02</div>
+          <div class="journey-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
           </div>
+          <h3>Get Your Personalised Plan</h3>
+          <p>Your tutor assesses your current level, listens to your goals, and builds a focused learning plan designed specifically around you — not a generic template.</p>
+          <div class="journey-tag">Tailored to your goals</div>
         </div>
-        <div class="timeline-item tl-left">
-          <div class="tl-year">2023</div>
-          <div class="tl-card">
-            <h3>IELTS Programme Launch</h3>
-            <p>After consistent demand, BrightPath launched a dedicated IELTS & TOEFL preparation programme, led by former examiner Laura Chen. The first cohort saw an average score improvement of 1.2 bands.</p>
+
+        <div class="journey-card">
+          <div class="journey-step">03</div>
+          <div class="journey-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
           </div>
+          <h3>Learn at Your Pace</h3>
+          <p>Regular 1-on-1 sessions, session notes after every lesson, and honest feedback that actually moves you forward. You'll feel the difference quickly.</p>
+          <div class="journey-tag">Consistent · Structured · Honest</div>
         </div>
-        <div class="timeline-item tl-right">
-          <div class="tl-year">2024</div>
-          <div class="tl-card">
-            <h3>Expanding Globally</h3>
-            <p>Students from 15+ countries. A new Business English programme launched for students entering the workforce. BrightPath partnered with two university student associations as a recommended tutoring provider.</p>
+
+        <div class="journey-card">
+          <div class="journey-step">04</div>
+          <div class="journey-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
+          <h3>Reach Your Goals</h3>
+          <p>Better grades, a higher exam score, or simply the confidence to speak without hesitation — whatever brought you here, that's what we're working toward together.</p>
+          <div class="journey-tag">Real, measurable results</div>
         </div>
-        <div class="timeline-item tl-left">
-          <div class="tl-year">2025+</div>
-          <div class="tl-card highlight-card">
-            <h3>The Journey Continues</h3>
-            <p>Over 500 students supported and growing. BrightPath's mission remains exactly what it was on day one — to make sure that language is never the thing that holds a brilliant person back.</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>

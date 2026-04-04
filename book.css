@@ -97,11 +97,13 @@
 
 .book-packages-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  max-width: 860px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
   margin: 0 auto 28px;
 }
+@media (max-width: 900px) { .book-packages-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .book-packages-grid { grid-template-columns: 1fr; } }
 
 .book-package-card {
   background: #fff;
@@ -138,7 +140,21 @@
   letter-spacing: 0.04em;
 }
 
-.bpc-icon { font-size: 2.2rem; line-height: 1; }
+.bpc-icon {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(6,182,212,0.1));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s ease;
+}
+.bpc-icon svg { width: 22px; height: 22px; color: var(--primary); }
+.book-package-featured .bpc-icon { background: rgba(255,255,255,0.15); }
+.book-package-featured .bpc-icon svg { color: #fff; }
+
+.bpc-badge-alt {
+  background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+  box-shadow: 0 4px 12px rgba(79,70,229,0.4) !important;
+}
 
 .bpc-top h2 {
   font-family: 'Playfair Display', Georgia, serif;
@@ -279,6 +295,22 @@
 }
 .book-reassurance a { color: var(--primary); }
 
+.book-pricing-link {
+  text-align: center;
+  margin: 10px auto 0;
+}
+.book-pricing-link a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.book-pricing-link a:hover {
+  border-bottom-color: var(--primary);
+}
+
 /* Free trial section */
 .free-trial-section { background: #fff; }
 .free-trial-inner {
@@ -344,3 +376,38 @@
 @media (max-width: 480px) {
   .book-packages-section { padding: 60px 0; }
 }
+
+/* ── Free Trial Banner ── */
+.book-trial-banner {
+  background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(6,182,212,0.06));
+  border-top: 1px solid rgba(79,70,229,0.12);
+  border-bottom: 1px solid rgba(79,70,229,0.12);
+  padding: 20px 0;
+}
+.book-trial-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.btb-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.btb-icon svg { width: 20px; height: 20px; color: #fff; }
+.btb-text { flex: 1; min-width: 200px; }
+.btb-text strong { display: block; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.btb-text span { font-size: 0.85rem; color: var(--text-secondary); }
+.btb-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.btb-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }

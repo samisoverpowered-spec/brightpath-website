@@ -139,7 +139,30 @@
 .mission-card:hover { transform: translateX(6px); box-shadow: var(--shadow-md); border-color: rgba(79,70,229,0.2); }
 .mission-card:hover::before { transform: scaleY(1); }
 
-.mc-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.mc-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(6,182,212,0.1));
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+.mc-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+.mission-card:hover .mc-icon {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+.mission-card:hover .mc-icon svg {
+  color: #fff;
+}
 .mission-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 .mission-card p  { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
 
@@ -270,14 +293,23 @@
   gap: 14px;
 }
 .cred-icon {
-  font-size: 1.2rem;
-  width: 38px; height: 38px;
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(6,182,212,0.1));
+  border: 1px solid rgba(79,70,229,0.15);
+  border-radius: 11px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  transition: background 0.3s ease;
 }
+.cred-icon svg {
+  width: 18px; height: 18px;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+.credential:hover .cred-icon {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+.credential:hover .cred-icon svg { color: #fff; }
 .credential strong {
   display: block;
   font-size: 0.9rem;
@@ -487,4 +519,60 @@
 @media (max-width: 480px) {
   .about-hero-visual { display: none; }
   .founder-visual { align-items: center; }
+}
+
+/* ── Student Journey Grid ── */
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+@media (max-width: 900px) { .journey-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 540px) { .journey-grid { grid-template-columns: 1fr; } }
+
+.journey-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.journey-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(79,70,229,0.25);
+  transform: translateY(-4px);
+}
+.journey-step {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  opacity: 0.5;
+}
+.journey-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(6,182,212,0.1));
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s ease;
+}
+.journey-icon svg { width: 20px; height: 20px; color: var(--primary); transition: color 0.3s ease; }
+.journey-card:hover .journey-icon { background: linear-gradient(135deg, var(--primary), var(--accent)); }
+.journey-card:hover .journey-icon svg { color: #fff; }
+.journey-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 0; }
+.journey-card p  { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin: 0; flex: 1; }
+.journey-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(79,70,229,0.08);
+  border-radius: 999px;
+  padding: 4px 12px;
+  width: fit-content;
 }

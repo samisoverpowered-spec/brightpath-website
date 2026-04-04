@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <script src="darkmode.js"></script>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -21,18 +22,22 @@
       </a>
       <nav class="nav-links">
         <a href="index.html#services">Services</a>
-        <a href="index.html#tutors">Tutors</a>
+        <a href="about.html">About</a>
         <a href="pricing.html" class="active">Pricing</a>
         <a href="index.html#testimonials">Reviews</a>
         <a href="book.html" class="btn btn-nav">Book a Lesson</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html#services">Services</a>
-      <a href="index.html#tutors">Tutors</a>
+      <a href="about.html">About</a>
       <a href="pricing.html">Pricing</a>
       <a href="index.html#testimonials">Reviews</a>
       <a href="book.html">Book a Lesson</a>
@@ -55,6 +60,19 @@
   <!-- PRICING CARDS -->
   <section class="pricing-cards-section">
     <div class="container">
+
+      <!-- Free trial banner -->
+      <div class="free-trial-banner">
+        <div class="ftb-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="ftb-content">
+          <strong>New to BrightPath? Start completely free.</strong>
+          <p>Book a free 30-minute trial session — no payment, no commitment. Experience the quality before you spend a cent.</p>
+        </div>
+        <a href="index.html#contact" class="btn btn-outline ftb-btn">Book Free Trial →</a>
+      </div>
+
       <div class="pricing-grid">
 
         <!-- Single Session -->
@@ -64,66 +82,179 @@
             <h2 class="pricing-card-name">Single Session</h2>
             <div class="pricing-price">
               <span class="price-currency">CA$</span>
-              <span class="price-amount">30</span>
+              <span class="price-amount">40</span>
               <span class="price-period">/ session</span>
             </div>
-            <p class="pricing-card-desc">Perfect for trying BrightPath or for students who need occasional support.</p>
+            <p class="pricing-card-desc">One focused 60-minute session. Great for targeted help with a specific assignment, exam, or topic.</p>
           </div>
           <ul class="pricing-features-list">
-            <li><span class="pf-check">✓</span> 60-minute 1-on-1 live session</li>
-            <li><span class="pf-check">✓</span> Choose any available tutor</li>
-            <li><span class="pf-check">✓</span> Session notes & homework sent after</li>
-            <li><span class="pf-check">✓</span> Reschedule up to 24 hrs before</li>
-            <li><span class="pf-check">✓</span> Zoom or Google Meet</li>
-            <li class="pf-muted"><span class="pf-dash">–</span> No long-term commitment</li>
+            <li><span class="pf-check">✓</span> 1 × 60-minute 1-on-1 live session</li>
+            <li><span class="pf-check">✓</span> Any subject or skill area</li>
+            <li><span class="pf-check">✓</span> Session notes emailed after</li>
+            <li><span class="pf-check">✓</span> Homework & practice resources</li>
+            <li><span class="pf-check">✓</span> Free reschedule (24h notice)</li>
+            <li class="pf-muted"><span class="pf-dash">–</span> Personalised learning plan</li>
+            <li class="pf-muted"><span class="pf-dash">–</span> Progress reports</li>
+            <li class="pf-muted"><span class="pf-dash">–</span> Direct tutor messaging</li>
           </ul>
-          <a href="book.html?pkg=single" class="btn btn-outline btn-full pricing-btn">Book a Single Session</a>
+          <a href="book.html" class="btn btn-outline btn-full pricing-btn">Book a Single Session</a>
         </div>
 
         <!-- Bundle — featured -->
         <div class="pricing-card pricing-card-featured" id="card-bundle">
-          <div class="pricing-card-badge">Best Value — Save $20</div>
+          <div class="pricing-card-badge">Most Popular — Save CA$30</div>
           <div class="pricing-card-header">
-            <span class="pricing-card-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.9);">Bundle & save</span>
+            <span class="pricing-card-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.9);">Bundle &amp; save</span>
             <h2 class="pricing-card-name">5-Session Bundle</h2>
             <div class="pricing-price">
               <span class="price-currency">CA$</span>
-              <span class="price-amount">130</span>
+              <span class="price-amount">170</span>
               <span class="price-period">/ 5 sessions</span>
             </div>
-            <p class="pricing-card-per">That's <strong>$26 per session</strong> — 13% off</p>
-            <p class="pricing-card-desc">Our most popular option for students working toward a consistent goal.</p>
+            <p class="pricing-card-per">CA$34 per session — save CA$30</p>
+            <p class="pricing-card-desc">The most popular choice for students working consistently toward exams, assignments, or fluency goals.</p>
           </div>
           <ul class="pricing-features-list">
             <li><span class="pf-check pf-check-light">✓</span> 5 × 60-minute 1-on-1 sessions</li>
-            <li><span class="pf-check pf-check-light">✓</span> Same tutor every session (consistency)</li>
-            <li><span class="pf-check pf-check-light">✓</span> Personalised learning plan included</li>
+            <li><span class="pf-check pf-check-light">✓</span> Same tutor every session</li>
+            <li><span class="pf-check pf-check-light">✓</span> Personalised learning plan</li>
             <li><span class="pf-check pf-check-light">✓</span> Session notes & homework every time</li>
             <li><span class="pf-check pf-check-light">✓</span> Progress report after session 5</li>
             <li><span class="pf-check pf-check-light">✓</span> Priority scheduling slots</li>
+            <li><span class="pf-check pf-check-light">✓</span> Valid for 3 months</li>
+            <li class="pf-muted" style="color:rgba(255,255,255,0.4);"><span class="pf-dash" style="color:rgba(255,255,255,0.3);">–</span> Direct tutor messaging</li>
           </ul>
-          <a href="book.html?pkg=bundle" class="btn btn-primary-light btn-full pricing-btn">Get the 5-Session Bundle</a>
+          <a href="book.html" class="btn btn-primary-light btn-full pricing-btn">Get the 5-Session Bundle</a>
           <p class="pricing-card-note">Sessions valid for 3 months from purchase</p>
+        </div>
+
+        <!-- Term Plan -->
+        <div class="pricing-card" id="card-term">
+          <div class="pricing-card-badge pricing-card-badge-alt">Best Value — Full Term</div>
+          <div class="pricing-card-header">
+            <span class="pricing-card-tag">Deep commitment</span>
+            <h2 class="pricing-card-name">Full Term Plan</h2>
+            <div class="pricing-price">
+              <span class="price-currency">CA$</span>
+              <span class="price-amount">500</span>
+              <span class="price-period">/ 4 months</span>
+            </div>
+            <p class="pricing-card-per">Weekly sessions all term — transformational results</p>
+            <p class="pricing-card-desc">For students who want long-term, structured improvement across a full academic term.</p>
+          </div>
+          <ul class="pricing-features-list">
+            <li><span class="pf-check">✓</span> Weekly 60-minute sessions (4 months)</li>
+            <li><span class="pf-check">✓</span> Dedicated tutor for the full term</li>
+            <li><span class="pf-check">✓</span> Full personalised learning roadmap</li>
+            <li><span class="pf-check">✓</span> Session notes + homework every week</li>
+            <li><span class="pf-check">✓</span> Monthly progress reports</li>
+            <li><span class="pf-check">✓</span> Priority & flexible rescheduling</li>
+            <li><span class="pf-check">✓</span> Direct tutor messaging</li>
+            <li><span class="pf-check">✓</span> Mid-term learning plan review</li>
+          </ul>
+          <a href="book.html" class="btn btn-outline btn-full pricing-btn">Start the Term Plan</a>
+          <p class="pricing-card-note">Best for students with long-term goals</p>
         </div>
 
       </div>
 
-      <p class="pricing-note">All prices in Canadian dollars (CAD) · Secure payment via Stripe · Instant email confirmation</p>
+      <p class="pricing-note">All prices in Canadian dollars (CAD) &nbsp;·&nbsp; Secure payment via Stripe &nbsp;·&nbsp; Instant email confirmation</p>
+    </div>
+  </section>
 
-      <!-- Free trial -->
-      <div class="free-trial-banner">
-        <div class="ftb-icon">🎁</div>
-        <div class="ftb-content">
-          <strong>Not sure yet? Try us free first.</strong>
-          <p>Book a free 30-minute trial session — no payment required. Just fill in our contact form and we'll match you with a tutor.</p>
-        </div>
-        <a href="index.html#contact" class="btn btn-outline ftb-btn">Book Free Trial</a>
+  <!-- COMPARISON TABLE -->
+  <section class="compare-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Compare Plans</div>
+        <h2 class="section-title">Everything side <em>by side</em></h2>
+        <p class="section-subtitle">Not sure which plan is right for you? Here's a clear breakdown of what each includes.</p>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="compare-feature-col">What's included</th>
+              <th>Single<br /><span class="compare-price">CA$40</span></th>
+              <th class="compare-featured-col">5-Session Bundle<br /><span class="compare-price">CA$170</span></th>
+              <th>Full Term<br /><span class="compare-price">CA$500</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>60-minute 1-on-1 sessions</td>
+              <td><span class="ct-yes">✓</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Session notes emailed after</td>
+              <td><span class="ct-yes">✓</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Homework & practice resources</td>
+              <td><span class="ct-yes">✓</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Free reschedule (24h notice)</td>
+              <td><span class="ct-yes">✓</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Personalised learning plan</td>
+              <td><span class="ct-no">–</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Same dedicated tutor</td>
+              <td><span class="ct-no">–</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Progress reports</td>
+              <td><span class="ct-no">–</span></td>
+              <td class="compare-featured-col">After session 5</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Direct tutor messaging</td>
+              <td><span class="ct-no">–</span></td>
+              <td class="compare-featured-col"><span class="ct-no">–</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Mid-term learning review</td>
+              <td><span class="ct-no">–</span></td>
+              <td class="compare-featured-col"><span class="ct-no">–</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr>
+              <td>Priority scheduling</td>
+              <td><span class="ct-no">–</span></td>
+              <td class="compare-featured-col"><span class="ct-yes">✓</span></td>
+              <td><span class="ct-yes">✓</span></td>
+            </tr>
+            <tr class="compare-cta-row">
+              <td></td>
+              <td><a href="book.html" class="btn btn-outline btn-sm">Book Now</a></td>
+              <td class="compare-featured-col"><a href="book.html" class="btn btn-primary btn-sm">Get Bundle</a></td>
+              <td><a href="book.html" class="btn btn-outline btn-sm">Start Term</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- WHAT'S INCLUDED -->
-  <section class="included-section section">
+  <section class="included-section section" style="background:var(--bg-soft);">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Every Session</div>
@@ -132,41 +263,53 @@
       </div>
       <div class="included-grid">
         <div class="included-card">
-          <div class="included-icon">🎯</div>
+          <div class="included-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
           <h3>Personalised Focus</h3>
-          <p>Every session is tailored to your goals, level, and the specific challenges you're working through.</p>
+          <p>Every session is tailored to your goals, level, and the specific challenges you're working through — never a generic lesson.</p>
         </div>
         <div class="included-card">
-          <div class="included-icon">📝</div>
+          <div class="included-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
           <h3>Session Notes</h3>
-          <p>A written summary of what was covered, key corrections, and vocabulary is emailed to you after every lesson.</p>
+          <p>A written summary of what was covered, key corrections, and new vocabulary is emailed to you after every lesson.</p>
         </div>
         <div class="included-card">
-          <div class="included-icon">📚</div>
+          <div class="included-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
           <h3>Homework & Resources</h3>
-          <p>Practice materials, exercises, and reading resources sent after each session to reinforce your learning.</p>
+          <p>Practice materials and exercises sent after each session to reinforce your learning between lessons.</p>
         </div>
         <div class="included-card">
-          <div class="included-icon">💬</div>
-          <h3>Tutor Messaging</h3>
-          <p>Ask your tutor questions between sessions. We're here to help even outside of scheduled lesson time.</p>
+          <div class="included-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Tutor Support</h3>
+          <p>Have a quick question between sessions? Your tutor is reachable. We don't disappear between lessons.</p>
         </div>
         <div class="included-card">
-          <div class="included-icon">🔄</div>
+          <div class="included-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.18-5"/></svg>
+          </div>
           <h3>Flexible Rescheduling</h3>
-          <p>Life happens. Reschedule or cancel any session up to 24 hours in advance, no penalty.</p>
+          <p>Life happens. Reschedule or cancel any session up to 24 hours in advance with no penalty or extra fees.</p>
         </div>
         <div class="included-card">
-          <div class="included-icon">🏆</div>
-          <h3>Expert Tutors</h3>
-          <p>All tutors hold CELTA/DELTA qualifications and have years of experience with international students.</p>
+          <div class="included-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Secure Payments</h3>
+          <p>All payments processed by Stripe. Your card details are never stored on our servers. 100% safe.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section section" style="background: var(--bg-soft);">
+  <section class="faq-section section">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">FAQ</div>
@@ -174,58 +317,36 @@
       </div>
       <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-question">
-            How do I schedule my session after paying?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>After your payment is confirmed, you'll be taken to a booking page where you can pick your preferred date and time using our Calendly calendar. You'll also receive a confirmation email with a scheduling link.</p>
-          </div>
+          <button class="faq-question">How do I schedule my session after paying? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>After your payment is confirmed, you'll receive a confirmation email with a scheduling link. From there you can pick your preferred date and time directly from your tutor's availability calendar.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            What happens if I need to cancel?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>You can reschedule or cancel any session up to 24 hours before your scheduled time at no charge. Cancellations within 24 hours may forfeit that session. Bundle sessions never expire and can always be rescheduled.</p>
-          </div>
+          <button class="faq-question">Is there really a free trial? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes — completely free. Your first 30-minute session costs nothing. Just fill in the contact form, tell us your goals, and we'll match you with a tutor for a free introductory session. No card required.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            Do bundle sessions expire?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>5-session bundles are valid for 3 months from the date of purchase. If you need more time, just reach out and we'll extend your expiry date.</p>
-          </div>
+          <button class="faq-question">What happens if I need to cancel or reschedule? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>You can reschedule or cancel any session up to 24 hours before your scheduled time at no charge. Cancellations within 24 hours may forfeit that session credit. We're always happy to work with you if something unexpected comes up — just reach out.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            Can I choose my tutor?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes! After payment you'll see available time slots for each of our tutors. For bundle packages, we recommend sticking with the same tutor for consistency, but you can switch if needed.</p>
-          </div>
+          <button class="faq-question">Do sessions expire? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>5-session bundles are valid for 3 months from the date of purchase. The Full Term Plan runs for 4 calendar months from your first session. If you need an extension for any reason, just contact us and we'll sort it out.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            What platform are sessions held on?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Sessions are held via Zoom or Google Meet. A link will be sent to your email before every session. All you need is a device with a camera and microphone.</p>
-          </div>
+          <button class="faq-question">What's the difference between the Bundle and the Term Plan? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>The 5-Session Bundle gives you 5 flexible sessions to use across 3 months — great for targeted progress. The Full Term Plan is a structured 4-month commitment with weekly sessions, monthly progress reports, direct tutor messaging, and a mid-term review. It's for students who want deep, lasting improvement over a full semester.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">
-            Is my payment secure?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Absolutely. All payments are processed by Stripe — a world-leading payment platform used by millions of businesses. We never store your card details on our servers.</p>
-          </div>
+          <button class="faq-question">Can I choose my tutor? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes. After booking you'll see tutor availability and can choose who you'd like to work with. For the Bundle and Term Plan, we strongly recommend sticking with one tutor throughout for consistency, but switching is possible.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What platform are sessions held on? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Sessions are held via Zoom or Google Meet — your choice. A link is sent to your email before every session. All you need is a device with a camera and microphone.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is my payment secure? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Absolutely. All payments are processed by Stripe — a world-leading payment platform trusted by millions of businesses. We never store your card details on our servers.</p></div>
         </div>
       </div>
     </div>
@@ -239,10 +360,10 @@
     </div>
     <div class="container pricing-cta-inner">
       <h2>Ready to start?</h2>
-      <p>Pick your session below and you'll be learning within 24 hours.</p>
+      <p>Try a free 30-minute trial first, or dive straight in. Either way, we're here.</p>
       <div class="pricing-cta-btns">
-        <a href="book.html?pkg=bundle" class="btn btn-primary">Get 5 Sessions — CA$130</a>
-        <a href="book.html?pkg=single" class="btn btn-ghost">Book Single Session — CA$30</a>
+        <a href="book.html" class="btn btn-primary">View All Plans — From CA$40</a>
+        <a href="index.html#contact" class="btn btn-ghost">Book Free Trial First</a>
       </div>
     </div>
   </section>
