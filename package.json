@@ -1,7 +1,7 @@
 {
-  "name": "brightpath-website",
+  "name": "pomelo-english",
   "version": "1.0.0",
-  "description": "BrightPath English tutoring website with Stripe payments and Resend email",
+  "description": "Pomelo English tutoring website with Stripe payments and Resend email",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname)));
 const PACKAGES = {
   single: {
     label:       '1-Hour Tutoring Session',
-    description: 'Live 1-on-1 English tutoring with a BrightPath expert',
+    description: 'Live 1-on-1 English tutoring with a Pomelo English expert',
     amount:      3000,   // $30.00 CAD in cents
     sessions:    1,
   },
@@ -127,9 +127,9 @@ async function handlePaymentSuccess(session) {
 
   try {
     await resend.emails.send({
-      from:    'BrightPath English <hello@brightpathenglish.com>',
+      from:    'Pomelo English <hello@pomelo-english.com>',
       to:      email,
-      subject: `✅ You're confirmed — BrightPath English booking`,
+      subject: `✅ You're confirmed — Pomelo English booking`,
       html:    buildConfirmationEmail(name, pkg, amount),
     });
     console.log(`✉️  Confirmation email sent → ${email}`);
@@ -150,7 +150,7 @@ function buildConfirmationEmail(name, pkg, amount) {
 
     <!-- Header -->
     <div style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e3a8a 100%);padding:44px 40px 36px;text-align:center;">
-      <p style="color:#818cf8;font-size:1rem;font-weight:800;margin:0 0 10px;letter-spacing:0.05em;">✦ BRIGHTPATH ENGLISH</p>
+      <p style="color:#818cf8;font-size:1rem;font-weight:800;margin:0 0 10px;letter-spacing:0.05em;">✦ POMELO ENGLISH</p>
       <h1 style="color:#ffffff;font-size:1.75rem;font-weight:700;margin:0 0 8px;line-height:1.2;">Payment Confirmed!</h1>
       <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;margin:0;">Your tutoring session${pkg.sessions > 1 ? 's are' : ' is'} secured.</p>
     </div>
@@ -159,7 +159,7 @@ function buildConfirmationEmail(name, pkg, amount) {
     <div style="padding:40px;">
       <p style="font-size:1rem;color:#374151;margin:0 0 6px;">Hi ${name},</p>
       <p style="font-size:0.95rem;color:#6b7280;line-height:1.75;margin:0 0 28px;">
-        Thank you for booking with BrightPath English! Your payment of <strong style="color:#1e1b4b;">$${amount} CAD</strong> has been received and your ${pkg.sessions === 1 ? 'session is' : 'sessions are'} confirmed.
+        Thank you for booking with Pomelo English! Your payment of <strong style="color:#1e1b4b;">$${amount} CAD</strong> has been received and your ${pkg.sessions === 1 ? 'session is' : 'sessions are'} confirmed.
       </p>
 
       <!-- Receipt box -->
@@ -196,8 +196,8 @@ function buildConfirmationEmail(name, pkg, amount) {
 
       <p style="font-size:0.82rem;color:#9ca3af;text-align:center;border-top:1px solid #f3f4f6;padding-top:24px;margin:0;line-height:1.6;">
         Questions? Reply to this email or reach us at
-        <a href="mailto:hello@brightpathenglish.com" style="color:#4f46e5;text-decoration:none;">hello@brightpathenglish.com</a><br/>
-        <span style="font-size:0.75rem;">© 2026 BrightPath English. All rights reserved.</span>
+        <a href="mailto:hello@pomelo-english.com" style="color:#4f46e5;text-decoration:none;">hello@pomelo-english.com</a><br/>
+        <span style="font-size:0.75rem;">© 2026 Pomelo English. All rights reserved.</span>
       </p>
     </div>
   </div>
@@ -210,6 +210,6 @@ function buildConfirmationEmail(name, pkg, amount) {
 // ─────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`✦ BrightPath server running → http://localhost:${PORT}`);
+  console.log(`✦ Pomelo English server running → http://localhost:${PORT}`);
   console.log(`  Stripe mode: ${process.env.STRIPE_SECRET_KEY?.startsWith('sk_live') ? '🟢 LIVE' : '🟡 TEST'}`);
 });

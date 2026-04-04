@@ -40,7 +40,7 @@ function checkout(pkg) {
   const errorEl   = document.getElementById('payment-error');
   const errorText = document.getElementById('payment-error-text');
   if (errorEl && errorText) {
-    errorText.textContent = 'Online payments are coming soon! In the meantime, please book via our contact form and we\'ll arrange payment directly. Email: hello@brightpathenglish.com';
+    errorText.textContent = 'Online payments are coming soon! In the meantime, please book via our contact form and we\'ll arrange payment directly. Email: hello@pomelo-english.com';
     errorEl.style.display = 'flex';
     errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }

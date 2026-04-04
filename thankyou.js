@@ -11,7 +11,7 @@ async function loadSessionDetails() {
     summaryEl.innerHTML = `
       <div class="ty-summary-label">Purchase</div>
       <div class="ty-summary-row">
-        <span class="ty-summary-name">BrightPath English Session</span>
+        <span class="ty-summary-name">Pomelo English Session</span>
         <span class="ty-summary-badge">✓ Paid</span>
       </div>`;
     return;
@@ -44,7 +44,7 @@ async function loadSessionDetails() {
     summaryEl.innerHTML = `
       <p class="ty-summary-label">Order Summary</p>
       <div class="ty-summary-row">
-        <span class="ty-summary-name">BrightPath Tutoring Session</span>
+        <span class="ty-summary-name">Pomelo English Tutoring Session</span>
         <span class="ty-summary-badge">✓ Paid</span>
       </div>
       <div class="ty-summary-meta"><span>Receipt sent to your email</span></div>`;
