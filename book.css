@@ -475,9 +475,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
   opacity: 0;
   transition: opacity 0.22s ease;
+  box-sizing: border-box;
 }
 .pmodal-overlay.pmodal-visible { opacity: 1; }
 
@@ -485,15 +486,16 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 22px;
-  padding: 36px 36px 32px;
+  padding: 32px 32px 28px;
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
   position: relative;
   box-shadow: 0 32px 80px rgba(0,0,0,0.28), 0 8px 24px rgba(79,70,229,0.15);
   transform: translateY(22px) scale(0.97);
   transition: transform 0.32s cubic-bezier(0.34, 1.4, 0.64, 1);
-  max-height: 90vh;
+  max-height: calc(100dvh - 32px);
   overflow-y: auto;
+  box-sizing: border-box;
 }
 .pmodal-overlay.pmodal-visible .pmodal-card {
   transform: translateY(0) scale(1);
@@ -645,6 +647,8 @@
 }
 .pmodal-field input,
 .pmodal-field select {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px 14px;
   border: 1.5px solid var(--border);
   border-radius: 10px;
@@ -653,6 +657,7 @@
   color: var(--text);
   background: var(--bg-soft);
   transition: border-color 0.2s ease;
+  min-width: 0;
 }
 .pmodal-field input:focus,
 .pmodal-field select:focus {
@@ -733,6 +738,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.pmodal-form-row > .pmodal-field { min-width: 0; }
 
 /* Required star */
 .req { color: var(--primary); font-weight: 700; }
@@ -740,6 +746,9 @@
 
 /* Textarea */
 .pmodal-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   padding: 10px 14px;
   border: 1.5px solid var(--border);
   border-radius: 10px;
@@ -749,8 +758,6 @@
   background: var(--bg-soft);
   resize: vertical;
   transition: border-color 0.2s ease;
-  width: 100%;
-  box-sizing: border-box;
 }
 .pmodal-field textarea:focus {
   outline: none;
@@ -780,8 +787,24 @@
 }
 .pmodal-submit-loading { display: flex; align-items: center; gap: 8px; }
 
-@media (max-width: 540px) {
-  .pmodal-card { padding: 28px 22px 24px; }
+/* ── Modal responsive ── */
+@media (max-width: 560px) {
+  .pmodal-overlay {
+    padding: 0;
+    align-items: flex-end;   /* bottom sheet on phone */
+  }
+  .pmodal-card {
+    border-radius: 22px 22px 0 0;
+    padding: 24px 20px 32px;
+    max-height: 92dvh;
+    max-height: 92vh; /* fallback */
+  }
   .pmodal-form-row { grid-template-columns: 1fr; }
-  .pmodal-wechat-row { flex-direction: column; align-items: flex-start; }
+  .pmodal-wechat-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .pmodal-plan-name { font-size: 1.05rem; }
+  .pmodal-plan-price { font-size: 1.2rem; }
+  .pmodal-form-heading { font-size: 0.95rem; }
+}
+@media (max-width: 380px) {
+  .pmodal-card { padding: 20px 16px 28px; }
 }
