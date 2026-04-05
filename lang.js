@@ -314,9 +314,9 @@ var TRANSLATIONS = {
     // Book page
     'book.hero.tag': 'Book a Session',
     'book.hero.title.html': 'Choose your plan.<br /><em>Start learning today.</em>',
-    'book.hero.sub': 'Select a package below, pay securely via Stripe, and you\'ll be redirected to schedule your session time. Simple.',
+    'book.hero.sub': 'Select a package below and get in touch — we\'ll send you payment details and get your first session scheduled. Simple.',
     'book.step.1': 'Choose a package',
-    'book.step.2': 'Pay securely',
+    'book.step.2': 'Get in touch',
     'book.step.3': 'Schedule your time',
     'book.step.4': 'Start learning',
 
@@ -334,7 +334,7 @@ var TRANSLATIONS = {
     'book.single.f3': 'Session notes emailed after',
     'book.single.f4': 'Free reschedule (24h notice)',
     'book.single.f5': 'Instant booking confirmation',
-    'book.single.pay': 'Pay CA$40 with Stripe',
+    'book.single.pay': 'View Plan Details →',
 
     // Book page — bundle card
     'book.bundle.badge': 'Most Popular · Save CA$30',
@@ -348,7 +348,7 @@ var TRANSLATIONS = {
     'book.bundle.f4': 'Session notes after every lesson',
     'book.bundle.f5': 'Progress report after session 5',
     'book.bundle.f6': 'Flexible scheduling — valid 3 months',
-    'book.bundle.pay': 'Pay CA$170 with Stripe',
+    'book.bundle.pay': 'View Plan Details →',
 
     // Book page — term plan card
     'book.term.badge': 'Best Value · Full Term',
@@ -363,11 +363,11 @@ var TRANSLATIONS = {
     'book.term.f5': 'Monthly progress reports',
     'book.term.f6': 'Priority scheduling & rescheduling',
     'book.term.f7': 'Direct tutor messaging between sessions',
-    'book.term.pay': 'Pay CA$500 with Stripe',
+    'book.term.pay': 'View Plan Details →',
 
     // Book page — shared
-    'book.secure': ' Secure payment · Instant confirmation',
-    'book.reassurance.html': 'Powered by <strong>Stripe</strong> — your card details are never stored on our servers. All prices in CAD.',
+    'book.secure': ' We\'ll respond within 24 hours',
+    'book.reassurance.html': 'Payment via <strong>e-Transfer</strong> or <strong>WeChat Pay</strong> — details sent after you get in touch. All prices in CAD.',
     'book.pricing.link': 'View full pricing details →',
   },
 
@@ -673,9 +673,9 @@ var TRANSLATIONS = {
     // Book page
     'book.hero.tag': '预约课程',
     'book.hero.title.html': '选择你的方案。<br /><em>今天就开始学习。</em>',
-    'book.hero.sub': '在下方选择套餐，通过Stripe安全付款后，你将被引导至预约课程时间的页面。简单快捷。',
+    'book.hero.sub': '在下方选择套餐并联系我们——我们将发送付款方式并安排你的第一节课。简单快捷。',
     'book.step.1': '选择套餐',
-    'book.step.2': '安全付款',
+    'book.step.2': '联系我们',
     'book.step.3': '预约时间',
     'book.step.4': '开始学习',
 
@@ -693,7 +693,7 @@ var TRANSLATIONS = {
     'book.single.f3': '课后邮件发送课堂笔记',
     'book.single.f4': '免费改期（提前24小时）',
     'book.single.f5': '即时预约确认',
-    'book.single.pay': '通过 Stripe 支付 CA$40',
+    'book.single.pay': '查看方案详情 →',
 
     // Book page — bundle card
     'book.bundle.badge': '最受欢迎 · 节省 CA$30',
@@ -707,7 +707,7 @@ var TRANSLATIONS = {
     'book.bundle.f4': '每节课后发送课堂笔记',
     'book.bundle.f5': '第5节课后出具进度报告',
     'book.bundle.f6': '灵活排课——3个月内有效',
-    'book.bundle.pay': '通过 Stripe 支付 CA$170',
+    'book.bundle.pay': '查看方案详情 →',
 
     // Book page — term plan card
     'book.term.badge': '最超值 · 完整学期',
@@ -722,11 +722,11 @@ var TRANSLATIONS = {
     'book.term.f5': '每月进度报告',
     'book.term.f6': '优先排课及改期',
     'book.term.f7': '课程间可与导师直接沟通',
-    'book.term.pay': '通过 Stripe 支付 CA$500',
+    'book.term.pay': '查看方案详情 →',
 
     // Book page — shared
-    'book.secure': ' 安全支付 · 即时确认',
-    'book.reassurance.html': '由 <strong>Stripe</strong> 提供支付安全保障——你的银行卡信息绝不存储在我们的服务器上。所有价格以加拿大元（CAD）计算。',
+    'book.secure': ' 我们将在24小时内回复',
+    'book.reassurance.html': '支持<strong>电子转账</strong>或<strong>微信支付</strong>——联系后我们将发送付款详情。所有价格以加拿大元（CAD）计算。',
     'book.pricing.link': '查看完整价格详情 →',
   }
 };
