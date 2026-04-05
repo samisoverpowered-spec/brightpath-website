@@ -208,9 +208,9 @@
   gap: 10px;
   align-items: flex-start;
 }
-.bpc-features li span { color: var(--success); font-weight: 700; flex-shrink: 0; }
+.bpc-features li span:first-child { color: var(--success); font-weight: 700; flex-shrink: 0; }
 .book-package-featured .bpc-features li { color: rgba(255,255,255,0.72); }
-.book-package-featured .bpc-features li span { color: #6ee7b7; }
+.book-package-featured .bpc-features li span:first-child { color: #6ee7b7; }
 
 /* Pay button */
 .book-pay-btn {

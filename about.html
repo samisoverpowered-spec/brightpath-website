@@ -12,6 +12,7 @@
 </head>
 <body>
   <script src="darkmode.js"></script>
+  <script src="lang.js"></script>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -21,12 +22,19 @@
         <span class="logo-text">Pomelo<span class="logo-accent"> English</span></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="about.html" class="active">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="index.html#testimonials">Reviews</a>
-        <a href="book.html" class="btn btn-nav">Book a Lesson</a>
+        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="about.html" class="active" data-i18n="nav.about">About</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="index.html#testimonials" data-i18n="nav.reviews">Reviews</a>
+        <a href="book.html" class="btn btn-nav" data-i18n="nav.book">Book a Lesson</a>
       </nav>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-thumb"></span>
+        <span class="lang-labels">
+          <span class="lang-label lang-label-en">EN</span>
+          <span class="lang-label lang-label-zh">中</span>
+        </span>
+      </button>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
         <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -36,11 +44,11 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="index.html#testimonials">Reviews</a>
-      <a href="book.html">Book a Lesson</a>
+      <a href="index.html#services" data-i18n="nav.services">Services</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="index.html#testimonials" data-i18n="nav.reviews">Reviews</a>
+      <a href="book.html" data-i18n="nav.book">Book a Lesson</a>
     </div>
   </header>
 
@@ -53,26 +61,26 @@
     </div>
     <div class="container about-hero-inner">
       <div class="about-hero-text">
-        <div class="section-tag">Our Story</div>
-        <h1 class="about-hero-title">
+        <div class="section-tag" data-i18n="about.hero.tag">Our Story</div>
+        <h1 class="about-hero-title" data-i18n-html="about.hero.title.html">
           Built for students<br />who were <em>told their<br />English wasn't enough.</em>
         </h1>
-        <p class="about-hero-sub">
+        <p class="about-hero-sub" data-i18n="about.hero.sub">
           Pomelo English was founded on a simple belief — that language should never be a barrier to opportunity. We exist to give international students the tools, confidence, and expert support to thrive in English-speaking environments.
         </p>
       </div>
       <div class="about-hero-visual">
         <div class="about-stat-card about-stat-1">
           <span class="about-stat-num">500+</span>
-          <span class="about-stat-label">Students supported</span>
+          <span class="about-stat-label" data-i18n="about.stat.1">Students supported</span>
         </div>
         <div class="about-stat-card about-stat-2">
           <span class="about-stat-num">15+</span>
-          <span class="about-stat-label">Countries reached</span>
+          <span class="about-stat-label" data-i18n="about.stat.2">Countries reached</span>
         </div>
         <div class="about-stat-card about-stat-3">
           <span class="about-stat-num">4.9★</span>
-          <span class="about-stat-label">Average rating</span>
+          <span class="about-stat-label" data-i18n="about.stat.3">Average rating</span>
         </div>
         <div class="about-hero-badge">
           <span class="about-badge-icon">✦</span>
@@ -86,33 +94,33 @@
   <section class="mission-section section">
     <div class="container mission-inner">
       <div class="mission-text">
-        <div class="section-tag">Why We Exist</div>
-        <h2 class="section-title" style="text-align:left;">Language is a bridge,<br />not a <em>wall.</em></h2>
-        <p>Too many brilliant international students arrive in countries like Canada, Australia, and the UK with sharp minds and big ambitions — only to be held back by language barriers in their academic work, their professional lives, and their everyday confidence.</p>
-        <p>Pomelo English was built to close that gap. We don't offer generic lessons or one-size-fits-all programmes. We offer genuine, personalised mentorship from educators who understand exactly what it feels like to navigate an unfamiliar academic and cultural landscape.</p>
-        <p>Every session we deliver is guided by one question: <strong>what does this student actually need to move forward?</strong></p>
+        <div class="section-tag" data-i18n="mission.tag">Why We Exist</div>
+        <h2 class="section-title" style="text-align:left;" data-i18n-html="mission.title.html">Language is a bridge,<br />not a <em>wall.</em></h2>
+        <p data-i18n="mission.p1">Too many brilliant international students arrive in countries like Canada, Australia, and the UK with sharp minds and big ambitions — only to be held back by language barriers in their academic work, their professional lives, and their everyday confidence.</p>
+        <p data-i18n="mission.p2">Pomelo English was built to close that gap. We don't offer generic lessons or one-size-fits-all programmes. We offer genuine, personalised mentorship from educators who understand exactly what it feels like to navigate an unfamiliar academic and cultural landscape.</p>
+        <p data-i18n-html="mission.p3.html">Every session we deliver is guided by one question: <strong>what does this student actually need to move forward?</strong></p>
       </div>
       <div class="mission-cards">
         <div class="mission-card">
           <div class="mc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
           </div>
-          <h3>Student-first</h3>
-          <p>Every programme is built around the individual student's goals, level, and timeline — never a generic curriculum.</p>
+          <h3 data-i18n="mission.c1.title">Student-first</h3>
+          <p data-i18n="mission.c1.desc">Every programme is built around the individual student's goals, level, and timeline — never a generic curriculum.</p>
         </div>
         <div class="mission-card">
           <div class="mc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-          <h3>Globally minded</h3>
-          <p>Our tutors understand the unique challenges of studying and working in a second language, from cultural nuance to academic conventions.</p>
+          <h3 data-i18n="mission.c2.title">Globally minded</h3>
+          <p data-i18n="mission.c2.desc">Our tutors understand the unique challenges of studying and working in a second language, from cultural nuance to academic conventions.</p>
         </div>
         <div class="mission-card">
           <div class="mc-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
-          <h3>Results driven</h3>
-          <p>We measure our success by yours — improved grades, higher exam scores, and the confidence to communicate without hesitation.</p>
+          <h3 data-i18n="mission.c3.title">Results driven</h3>
+          <p data-i18n="mission.c3.desc">We measure our success by yours — improved grades, higher exam scores, and the confidence to communicate without hesitation.</p>
         </div>
       </div>
     </div>
@@ -132,27 +140,27 @@
           <div class="founder-photo-ring founder-ring-2"></div>
         </div>
         <div class="founder-quote-card">
-          <p>"I started Pomelo English because I know what it's like to work hard and still feel like the system wasn't built for you. Every student deserves someone in their corner who actually gets it."</p>
-          <span>— Sam Wang, Founder</span>
+          <p data-i18n="founder.quote">"I started Pomelo English because I know what it's like to work hard and still feel like the system wasn't built for you. Every student deserves someone in their corner who actually gets it."</p>
+          <span data-i18n="founder.quote.attr">— Sam Wang, Founder</span>
         </div>
       </div>
 
       <div class="founder-content">
-        <div class="section-tag">Meet the Founder</div>
+        <div class="section-tag" data-i18n="founder.tag">Meet the Founder</div>
         <h2 class="section-title" style="text-align:left;">Sam Wang</h2>
-        <p class="founder-role-title">Founder, Pomelo English</p>
+        <p class="founder-role-title" data-i18n="founder.role">Founder, Pomelo English</p>
 
         <div class="founder-bio">
-          <p>
+          <p data-i18n="founder.bio.1">
             Sam Wang is a student, educator, and the founder of Pomelo English. Currently enrolled in the International Baccalaureate Diploma Programme — one of the most rigorous academic curricula in the world — Sam brings a rare perspective to tutoring: he knows exactly what it feels like to sit on the other side of the desk.
           </p>
-          <p>
+          <p data-i18n="founder.bio.2">
             Sam's passion for teaching started young. He has been teaching piano for several years, working with students of varying ages and skill levels. That experience taught him something that no textbook could: how to read a student's frustration, break a difficult concept into something manageable, and build the kind of trust that makes learning actually stick.
           </p>
-          <p>
+          <p data-i18n="founder.bio.3">
             Alongside his studies, Sam has volunteered and worked with tutoring-focused non-profit organisations, gaining hands-on experience supporting students who struggle to access quality academic help. Seeing how much of a difference the right guidance can make — and how little of it is available to those who need it most — is what drove him to build Pomelo English.
           </p>
-          <p>
+          <p data-i18n="founder.bio.4">
             Pomelo English was founded on a straightforward idea: students deserve support from someone who genuinely gets it. Sam isn't a distant expert — he's someone navigating high-level academics himself, who cares deeply about making sure language never stands between a capable student and their potential.
           </p>
         </div>
@@ -161,29 +169,29 @@
           <div class="credential">
             <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             <div>
-              <strong>IB Diploma Programme</strong>
-              <span>International Baccalaureate — one of the world's most rigorous pre-university curricula</span>
+              <strong data-i18n="founder.cred.1.title">IB Diploma Programme</strong>
+              <span data-i18n="founder.cred.1.desc">International Baccalaureate — one of the world's most rigorous pre-university curricula</span>
             </div>
           </div>
           <div class="credential">
             <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <div>
-              <strong>Non-Profit Tutoring Experience</strong>
-              <span>Hands-on work supporting students through educational non-profit organisations</span>
+              <strong data-i18n="founder.cred.2.title">Non-Profit Tutoring Experience</strong>
+              <span data-i18n="founder.cred.2.desc">Hands-on work supporting students through educational non-profit organisations</span>
             </div>
           </div>
           <div class="credential">
             <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="16" rx="2"/><path d="M6 18v4M10 18v4M14 18v4M18 18v4"/><path d="M8 2v10M14 2v10"/></svg></span>
             <div>
-              <strong>Piano Instructor</strong>
-              <span>Years of experience teaching students of all ages and skill levels</span>
+              <strong data-i18n="founder.cred.3.title">Piano Instructor</strong>
+              <span data-i18n="founder.cred.3.desc">Years of experience teaching students of all ages and skill levels</span>
             </div>
           </div>
           <div class="credential">
             <span class="cred-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><circle cx="12" cy="12" r="4"/></svg></span>
             <div>
-              <strong>Student Perspective</strong>
-              <span>Actively navigating high-level academics — bringing empathy and insight that only a fellow student can offer</span>
+              <strong data-i18n="founder.cred.4.title">Student Perspective</strong>
+              <span data-i18n="founder.cred.4.desc">Actively navigating high-level academics — bringing empathy and insight that only a fellow student can offer</span>
             </div>
           </div>
         </div>
@@ -196,9 +204,9 @@
   <section class="timeline-section section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">What to Expect</div>
-        <h2 class="section-title">Your journey with <em>Pomelo English</em></h2>
-        <p class="section-subtitle">From your very first message to reaching your goals — here's exactly what working with us looks like.</p>
+        <div class="section-tag" data-i18n="journey.tag">What to Expect</div>
+        <h2 class="section-title" data-i18n-html="journey.title.html">Your journey with <em>Pomelo English</em></h2>
+        <p class="section-subtitle" data-i18n="journey.subtitle">From your very first message to reaching your goals — here's exactly what working with us looks like.</p>
       </div>
       <div class="journey-grid">
 

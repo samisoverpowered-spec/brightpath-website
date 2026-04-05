@@ -12,6 +12,7 @@
 </head>
 <body>
   <script src="darkmode.js"></script>
+  <script src="lang.js"></script>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -21,12 +22,19 @@
         <span class="logo-text">Pomelo<span class="logo-accent"> English</span></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="index.html#testimonials">Reviews</a>
-        <a href="book.html" class="btn btn-nav active">Book a Lesson</a>
+        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="index.html#testimonials" data-i18n="nav.reviews">Reviews</a>
+        <a href="book.html" class="btn btn-nav active" data-i18n="nav.book">Book a Lesson</a>
       </nav>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-thumb"></span>
+        <span class="lang-labels">
+          <span class="lang-label lang-label-en">EN</span>
+          <span class="lang-label lang-label-zh">中</span>
+        </span>
+      </button>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
         <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -36,11 +44,11 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="index.html#testimonials">Reviews</a>
-      <a href="book.html">Book a Lesson</a>
+      <a href="index.html#services" data-i18n="nav.services">Services</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="index.html#testimonials" data-i18n="nav.reviews">Reviews</a>
+      <a href="book.html" data-i18n="nav.book">Book a Lesson</a>
     </div>
   </header>
 
@@ -57,29 +65,29 @@
       <div class="bh-shape bh-shape-2"></div>
     </div>
     <div class="container book-hero-inner">
-      <div class="section-tag">Book a Session</div>
-      <h1 class="book-hero-title">Choose your plan.<br /><em>Start learning today.</em></h1>
-      <p class="book-hero-sub">Select a package below, pay securely via Stripe, and you'll be redirected to schedule your session time. Simple.</p>
+      <div class="section-tag" data-i18n="book.hero.tag">Book a Session</div>
+      <h1 class="book-hero-title" data-i18n-html="book.hero.title.html">Choose your plan.<br /><em>Start learning today.</em></h1>
+      <p class="book-hero-sub" data-i18n="book.hero.sub">Select a package below, pay securely via Stripe, and you'll be redirected to schedule your session time. Simple.</p>
       <!-- How it works mini steps -->
       <div class="book-steps">
         <div class="book-step">
           <div class="bstep-num">1</div>
-          <span>Choose a package</span>
+          <span data-i18n="book.step.1">Choose a package</span>
         </div>
         <div class="bstep-arrow">→</div>
         <div class="book-step">
           <div class="bstep-num">2</div>
-          <span>Pay securely</span>
+          <span data-i18n="book.step.2">Pay securely</span>
         </div>
         <div class="bstep-arrow">→</div>
         <div class="book-step">
           <div class="bstep-num">3</div>
-          <span>Schedule your time</span>
+          <span data-i18n="book.step.3">Schedule your time</span>
         </div>
         <div class="bstep-arrow">→</div>
         <div class="book-step">
           <div class="bstep-num">4</div>
-          <span>Start learning!</span>
+          <span data-i18n="book.step.4">Start learning!</span>
         </div>
       </div>
     </div>
@@ -92,10 +100,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
       <div class="btb-text">
-        <strong>Not sure yet? Start completely free.</strong>
-        <span>Book a free 30-minute trial session — no payment, no commitment. Meet your tutor and experience Pomelo English before you spend a cent.</span>
+        <strong data-i18n="book.trial.banner.strong">Not sure yet? Start completely free.</strong>
+        <span data-i18n="book.trial.banner.desc">Book a free 30-minute trial session — no payment, no commitment. Meet your tutor and experience Pomelo English before you spend a cent.</span>
       </div>
-      <a href="index.html#contact" class="btn btb-btn">Book Free Trial →</a>
+      <a href="index.html#contact" class="btn btb-btn" data-i18n="book.trial.btn">Book Free Trial →</a>
     </div>
   </section>
 
@@ -110,118 +118,112 @@
             <div class="bpc-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <h2>Single Session</h2>
+            <h2 data-i18n="book.single.name">Single Session</h2>
             <div class="bpc-price">
               <span class="bpc-currency">CA$</span>
               <span class="bpc-amount">40</span>
-              <span class="bpc-per">per session</span>
+              <span class="bpc-per" data-i18n="book.single.per.label">per session</span>
             </div>
-            <p class="bpc-desc">One focused 60-minute 1-on-1 session. Great for targeted help with an assignment, exam prep, or trying Pomelo English for the first time.</p>
+            <p class="bpc-desc" data-i18n="book.single.desc">One focused 60-minute 1-on-1 session. Great for targeted help with an assignment, exam prep, or trying Pomelo English for the first time.</p>
           </div>
           <ul class="bpc-features">
-            <li><span>✓</span> 1 × 60-minute live session</li>
-            <li><span>✓</span> Any subject or skill area</li>
-            <li><span>✓</span> Session notes emailed after</li>
-            <li><span>✓</span> Free reschedule (24h notice)</li>
-            <li><span>✓</span> Instant booking confirmation</li>
+            <li><span>✓</span> <span data-i18n="book.single.f1">1 × 60-minute live session</span></li>
+            <li><span>✓</span> <span data-i18n="book.single.f2">Any subject or skill area</span></li>
+            <li><span>✓</span> <span data-i18n="book.single.f3">Session notes emailed after</span></li>
+            <li><span>✓</span> <span data-i18n="book.single.f4">Free reschedule (24h notice)</span></li>
+            <li><span>✓</span> <span data-i18n="book.single.f5">Instant booking confirmation</span></li>
           </ul>
           <button class="btn book-pay-btn" data-pkg="single" id="pay-single">
             <span class="pay-btn-text">
               <span class="pay-stripe-icon">
                 <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M14.25 12.5c0-1.1.9-1.5 2.4-1.5 2.1 0 4.8.65 6.9 1.8V6.4C21.3 5.5 19.05 5 16.5 5 10.75 5 7 8.05 7 13c0 7.7 10.6 6.45 10.6 9.8 0 1.3-1.1 1.7-2.65 1.7-2.3 0-5.25-.95-7.55-2.2v6.45C9.8 29.5 12.5 30 15.2 30c5.9 0 9.8-2.95 9.8-7.95-.05-8.35-10.75-6.8-10.75-9.55z"/></svg>
-              </span>
-              Pay CA$40 with Stripe
+              </span><span data-i18n="book.single.pay">Pay CA$40 with Stripe</span>
             </span>
             <span class="pay-btn-loading" style="display:none;">
               <span class="pay-spinner"></span> Processing…
             </span>
           </button>
           <p class="bpc-secure">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure payment · Instant confirmation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-i18n="book.secure"> Secure payment · Instant confirmation</span>
           </p>
         </div>
 
         <!-- Bundle — featured -->
         <div class="book-package-card book-package-featured" id="pkg-bundle" data-package="bundle">
-          <div class="bpc-badge">Most Popular · Save CA$30</div>
+          <div class="bpc-badge" data-i18n="book.bundle.badge">Most Popular · Save CA$30</div>
           <div class="bpc-top">
             <div class="bpc-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
             </div>
-            <h2>5-Session Bundle</h2>
+            <h2 data-i18n="book.bundle.name">5-Session Bundle</h2>
             <div class="bpc-price">
               <span class="bpc-currency">CA$</span>
               <span class="bpc-amount">170</span>
-              <span class="bpc-per">for 5 sessions</span>
+              <span class="bpc-per" data-i18n="book.bundle.per.label">for 5 sessions</span>
             </div>
-            <p class="bpc-per-session">CA$34 per session — save CA$30</p>
-            <p class="bpc-desc">The ideal choice for students working steadily toward a goal — whether that's an exam, an assignment, or building real fluency over time.</p>
+            <p class="bpc-per-session" data-i18n="book.bundle.per.session">CA$34 per session — save CA$30</p>
+            <p class="bpc-desc" data-i18n="book.bundle.desc">The ideal choice for students working steadily toward a goal — whether that's an exam, an assignment, or building real fluency over time.</p>
           </div>
           <ul class="bpc-features">
-            <li><span>✓</span> 5 × 60-minute live sessions</li>
-            <li><span>✓</span> Personalised learning plan</li>
-            <li><span>✓</span> Same tutor every session</li>
-            <li><span>✓</span> Session notes after every lesson</li>
-            <li><span>✓</span> Progress report after session 5</li>
-            <li><span>✓</span> Flexible scheduling — valid 3 months</li>
+            <li><span>✓</span> <span data-i18n="book.bundle.f1">5 × 60-minute live sessions</span></li>
+            <li><span>✓</span> <span data-i18n="book.bundle.f2">Personalised learning plan</span></li>
+            <li><span>✓</span> <span data-i18n="book.bundle.f3">Same tutor every session</span></li>
+            <li><span>✓</span> <span data-i18n="book.bundle.f4">Session notes after every lesson</span></li>
+            <li><span>✓</span> <span data-i18n="book.bundle.f5">Progress report after session 5</span></li>
+            <li><span>✓</span> <span data-i18n="book.bundle.f6">Flexible scheduling — valid 3 months</span></li>
           </ul>
           <button class="btn book-pay-btn book-pay-btn-featured" data-pkg="bundle" id="pay-bundle">
             <span class="pay-btn-text">
               <span class="pay-stripe-icon">
                 <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M14.25 12.5c0-1.1.9-1.5 2.4-1.5 2.1 0 4.8.65 6.9 1.8V6.4C21.3 5.5 19.05 5 16.5 5 10.75 5 7 8.05 7 13c0 7.7 10.6 6.45 10.6 9.8 0 1.3-1.1 1.7-2.65 1.7-2.3 0-5.25-.95-7.55-2.2v6.45C9.8 29.5 12.5 30 15.2 30c5.9 0 9.8-2.95 9.8-7.95-.05-8.35-10.75-6.8-10.75-9.55z"/></svg>
-              </span>
-              Pay CA$170 with Stripe
+              </span><span data-i18n="book.bundle.pay">Pay CA$170 with Stripe</span>
             </span>
             <span class="pay-btn-loading" style="display:none;">
               <span class="pay-spinner"></span> Processing…
             </span>
           </button>
           <p class="bpc-secure bpc-secure-light">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure payment · Instant confirmation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-i18n="book.secure"> Secure payment · Instant confirmation</span>
           </p>
         </div>
 
         <!-- Term Plan -->
         <div class="book-package-card" id="pkg-term" data-package="term">
-          <div class="bpc-badge bpc-badge-alt">Best Value · Full Term</div>
+          <div class="bpc-badge bpc-badge-alt" data-i18n="book.term.badge">Best Value · Full Term</div>
           <div class="bpc-top">
             <div class="bpc-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
-            <h2>Full Term Plan</h2>
+            <h2 data-i18n="book.term.name">Full Term Plan</h2>
             <div class="bpc-price">
               <span class="bpc-currency">CA$</span>
               <span class="bpc-amount">500</span>
-              <span class="bpc-per">for 4 months</span>
+              <span class="bpc-per" data-i18n="book.term.per.label">for 4 months</span>
             </div>
-            <p class="bpc-per-session">Weekly sessions all term — the deepest results</p>
-            <p class="bpc-desc">Commit to a full academic term of consistent weekly sessions. Designed for students who want transformational, long-term improvement — not just a quick fix.</p>
+            <p class="bpc-per-session" data-i18n="book.term.per.session">Weekly sessions all term — the deepest results</p>
+            <p class="bpc-desc" data-i18n="book.term.desc">Commit to a full academic term of consistent weekly sessions. Designed for students who want transformational, long-term improvement — not just a quick fix.</p>
           </div>
           <ul class="bpc-features">
-            <li><span>✓</span> Weekly 60-minute sessions (4 months)</li>
-            <li><span>✓</span> Dedicated tutor for the full term</li>
-            <li><span>✓</span> Full personalised learning roadmap</li>
-            <li><span>✓</span> Session notes + homework tasks</li>
-            <li><span>✓</span> Monthly progress reports</li>
-            <li><span>✓</span> Priority scheduling & rescheduling</li>
-            <li><span>✓</span> Direct tutor messaging between sessions</li>
+            <li><span>✓</span> <span data-i18n="book.term.f1">Weekly 60-minute sessions (4 months)</span></li>
+            <li><span>✓</span> <span data-i18n="book.term.f2">Dedicated tutor for the full term</span></li>
+            <li><span>✓</span> <span data-i18n="book.term.f3">Full personalised learning roadmap</span></li>
+            <li><span>✓</span> <span data-i18n="book.term.f4">Session notes + homework tasks</span></li>
+            <li><span>✓</span> <span data-i18n="book.term.f5">Monthly progress reports</span></li>
+            <li><span>✓</span> <span data-i18n="book.term.f6">Priority scheduling & rescheduling</span></li>
+            <li><span>✓</span> <span data-i18n="book.term.f7">Direct tutor messaging between sessions</span></li>
           </ul>
           <button class="btn book-pay-btn" data-pkg="term" id="pay-term">
             <span class="pay-btn-text">
               <span class="pay-stripe-icon">
                 <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M14.25 12.5c0-1.1.9-1.5 2.4-1.5 2.1 0 4.8.65 6.9 1.8V6.4C21.3 5.5 19.05 5 16.5 5 10.75 5 7 8.05 7 13c0 7.7 10.6 6.45 10.6 9.8 0 1.3-1.1 1.7-2.65 1.7-2.3 0-5.25-.95-7.55-2.2v6.45C9.8 29.5 12.5 30 15.2 30c5.9 0 9.8-2.95 9.8-7.95-.05-8.35-10.75-6.8-10.75-9.55z"/></svg>
-              </span>
-              Pay CA$500 with Stripe
+              </span><span data-i18n="book.term.pay">Pay CA$500 with Stripe</span>
             </span>
             <span class="pay-btn-loading" style="display:none;">
               <span class="pay-spinner"></span> Processing…
             </span>
           </button>
           <p class="bpc-secure">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Secure payment · Instant confirmation
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-i18n="book.secure"> Secure payment · Instant confirmation</span>
           </p>
         </div>
 
@@ -233,11 +235,11 @@
         <p id="payment-error-text">Something went wrong. Please try again or contact us at hello@pomeloEnglish.com</p>
       </div>
 
-      <p class="book-reassurance">
+      <p class="book-reassurance" data-i18n-html="book.reassurance.html">
         Powered by <strong>Stripe</strong> — your card details are never stored on our servers. All prices in CAD.
       </p>
       <p class="book-pricing-link">
-        <a href="pricing.html">View full pricing details →</a>
+        <a href="pricing.html" data-i18n="book.pricing.link">View full pricing details →</a>
       </p>
     </div>
   </section>
@@ -251,31 +253,31 @@
           <span class="logo-icon">✦</span>
           <span class="logo-text">Pomelo<span class="logo-accent"> English</span></span>
         </a>
-        <p>Personalised English tutoring for international students, wherever you are in the world.</p>
+        <p data-i18n="footer.brand.desc">Personalised English tutoring for international students, wherever you are in the world.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Services</h4>
-          <a href="index.html#services">Academic Writing</a>
-          <a href="index.html#services">IELTS / TOEFL Prep</a>
-          <a href="index.html#services">Business English</a>
+          <h4 data-i18n="footer.services">Services</h4>
+          <a href="index.html#services" data-i18n="s1.title">Academic Writing</a>
+          <a href="index.html#services" data-i18n="s3.title">IELTS / TOEFL Prep</a>
+          <a href="index.html#services" data-i18n="s4.title">Business English</a>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
-          <a href="pricing.html">Pricing</a>
-          <a href="book.html">Book a Lesson</a>
-          <a href="index.html#tutors">Meet Our Tutors</a>
+          <h4 data-i18n="footer.company">Company</h4>
+          <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+          <a href="book.html" data-i18n="nav.book">Book a Lesson</a>
+          <a href="index.html#tutors" data-i18n="footer.c.tutors">Meet Our Tutors</a>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact">Contact</h4>
           <a href="mailto:hello@pomeloEnglish.com">hello@pomeloEnglish.com</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2026 Pomelo English. All rights reserved.</p>
-        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        <p data-i18n="footer.copy">© 2026 Pomelo English. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#" data-i18n="footer.privacy">Privacy Policy</a><a href="#" data-i18n="footer.terms">Terms of Service</a></div>
       </div>
     </div>
   </footer>

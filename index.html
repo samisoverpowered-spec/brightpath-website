@@ -11,6 +11,7 @@
 </head>
 <body>
   <script src="darkmode.js"></script>
+  <script src="lang.js"></script>
 
   <!-- ===================== NAVIGATION ===================== -->
   <header class="navbar" id="navbar">
@@ -20,12 +21,19 @@
         <span class="logo-text">Pomelo<span class="logo-accent"> English</span></span>
       </a>
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="book.html" class="btn btn-nav">Book a Lesson</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+        <a href="#testimonials" data-i18n="nav.reviews">Reviews</a>
+        <a href="book.html" class="btn btn-nav" data-i18n="nav.book">Book a Lesson</a>
       </nav>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-thumb"></span>
+        <span class="lang-labels">
+          <span class="lang-label lang-label-en">EN</span>
+          <span class="lang-label lang-label-zh">中</span>
+        </span>
+      </button>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
         <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -35,11 +43,11 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="book.html">Book a Lesson</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="#testimonials" data-i18n="nav.reviews">Reviews</a>
+      <a href="book.html" data-i18n="nav.book">Book a Lesson</a>
     </div>
   </header>
 
@@ -53,33 +61,33 @@
     </div>
     <div class="container hero-inner">
       <div class="hero-content">
-        <div class="badge">Trusted by 500+ international students</div>
+        <div class="badge" data-i18n="hero.badge">Trusted by 500+ international students</div>
         <h1 class="hero-title">
-          Your Path to<br />
-          <span class="gradient-text">English Fluency</span><br />
-          Starts Here
+          <span data-i18n="hero.title.1">Your Path to</span><br />
+          <span class="gradient-text" data-i18n="hero.title.2">English Fluency</span><br />
+          <span data-i18n="hero.title.3">Starts Here</span>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
           Personalised 1-on-1 English tutoring designed for international students. Build confidence, improve your grades, and achieve your goals — at your own pace.
         </p>
         <div class="hero-actions">
-          <a href="book.html" class="btn btn-primary">Book a Lesson — CA$30</a>
-          <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
+          <a href="book.html" class="btn btn-primary" data-i18n="hero.btn.book">Book a Lesson — CA$30</a>
+          <a href="pricing.html" class="btn btn-ghost" data-i18n="hero.btn.pricing">View Pricing</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-number">500+</span>
-            <span class="stat-label">Students Helped</span>
+            <span class="stat-label" data-i18n="hero.stat.students">Students Helped</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
             <span class="stat-number">4.9★</span>
-            <span class="stat-label">Average Rating</span>
+            <span class="stat-label" data-i18n="hero.stat.rating">Average Rating</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat">
             <span class="stat-number">15+</span>
-            <span class="stat-label">Countries</span>
+            <span class="stat-label" data-i18n="hero.stat.countries">Countries</span>
           </div>
         </div>
       </div>
@@ -93,28 +101,28 @@
         <div class="session-card">
           <div class="session-header">
             <div class="session-dot"></div>
-            <span class="session-label">Live Tutoring Session</span>
+            <span class="session-label" data-i18n="session.label">Live Tutoring Session</span>
             <span class="session-time">32:14</span>
           </div>
           <div class="session-body">
             <div class="session-topic">
-              <span class="topic-tag">Academic Writing</span>
-              <p class="topic-title">Essay Structure &amp; Argumentation</p>
+              <span class="topic-tag" data-i18n="session.topic.tag">Academic Writing</span>
+              <p class="topic-title" data-i18n="session.topic.title">Essay Structure &amp; Argumentation</p>
             </div>
             <div class="session-progress">
               <div class="progress-track">
                 <div class="progress-fill"></div>
               </div>
-              <span class="progress-label">Lesson progress</span>
+              <span class="progress-label" data-i18n="session.progress">Lesson progress</span>
             </div>
             <div class="session-participants">
               <div class="participant">
                 <div class="part-avatar" style="background: linear-gradient(135deg,#818cf8,#4f46e5);">T</div>
-                <div class="part-info"><span class="part-name">Tutor Sarah</span><span class="part-role">Instructor</span></div>
+                <div class="part-info"><span class="part-name">Tutor Sarah</span><span class="part-role" data-i18n="session.tutor.role">Instructor</span></div>
               </div>
               <div class="participant">
                 <div class="part-avatar" style="background: linear-gradient(135deg,#06b6d4,#0891b2);">Y</div>
-                <div class="part-info"><span class="part-name">Hong</span><span class="part-role">Student</span></div>
+                <div class="part-info"><span class="part-name">Hong</span><span class="part-role" data-i18n="session.student.role">Student</span></div>
               </div>
             </div>
           </div>
@@ -123,29 +131,29 @@
               <span></span><span></span><span></span><span></span><span></span>
               <span></span><span></span><span></span><span></span><span></span>
             </div>
-            <span class="session-footer-label">Speaking now…</span>
+            <span class="session-footer-label" data-i18n="session.speaking">Speaking now…</span>
           </div>
         </div>
 
         <!-- Floating chips -->
         <div class="hero-chip chip-1">
           <span class="chip-icon">↑</span>
-          <div><strong>IELTS 7.5 → 8.0</strong><small>Score improved</small></div>
+          <div><strong>IELTS 7.5 → 8.0</strong><small data-i18n="chip.1.sub">Score improved</small></div>
         </div>
         <div class="hero-chip chip-2">
           <span class="chip-star">★</span>
-          <div><strong>4.9 / 5.0</strong><small>Student rating</small></div>
+          <div><strong>4.9 / 5.0</strong><small data-i18n="chip.2.sub">Student rating</small></div>
         </div>
         <div class="hero-chip chip-3">
           <span class="chip-flag">🌏</span>
-          <div><strong>15+ Countries</strong><small>Worldwide</small></div>
+          <div><strong data-i18n="chip.3.title">15+ Countries</strong><small data-i18n="chip.3.sub">Worldwide</small></div>
         </div>
       </div>
     </div>
   </section>
 
   <div class="scroll-indicator" id="scroll-indicator">
-    <span class="scroll-text">Scroll</span>
+    <span class="scroll-text" data-i18n="scroll.text">Scroll</span>
     <div class="scroll-arrow">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v14M4 11l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
@@ -154,7 +162,7 @@
   <!-- ===================== TRUST BAR ===================== -->
   <section class="trust-bar">
     <div class="container">
-      <p class="trust-label">Trusted by students in <strong>15+ countries</strong> worldwide</p>
+      <p class="trust-label" data-i18n-html="trust.label.html">Trusted by students in <strong>15+ countries</strong> worldwide</p>
     </div>
     <div class="trust-marquee-wrap">
       <div class="trust-marquee">
@@ -207,92 +215,92 @@
   <section class="services section" id="services">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">What We Offer</div>
-        <h2 class="section-title">Tutoring Programmes<br />Built Around <em>You</em></h2>
-        <p class="section-subtitle">Whether you need help with everyday conversation or rigorous exam preparation, we have a programme tailored to your goals.</p>
+        <div class="section-tag" data-i18n="services.tag">What We Offer</div>
+        <h2 class="section-title" data-i18n-html="services.title.html">Tutoring Programmes<br />Built Around <em>You</em></h2>
+        <p class="section-subtitle" data-i18n="services.subtitle">Whether you need help with everyday conversation or rigorous exam preparation, we have a programme tailored to your goals.</p>
       </div>
       <div class="services-grid">
         <div class="service-card featured">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
           </div>
-          <h3>Academic Writing</h3>
-          <p>Master essays, reports, and research papers. Learn academic style, structure, and citation with expert guidance.</p>
+          <h3 data-i18n="s1.title">Academic Writing</h3>
+          <p data-i18n="s1.desc">Master essays, reports, and research papers. Learn academic style, structure, and citation with expert guidance.</p>
           <ul class="service-features">
-            <li>Essay structure & argumentation</li>
-            <li>Grammar & sentence variety</li>
-            <li>Referencing (APA, Harvard, MLA)</li>
+            <li data-i18n="s1.f1">Essay structure & argumentation</li>
+            <li data-i18n="s1.f2">Grammar & sentence variety</li>
+            <li data-i18n="s1.f3">Referencing (APA, Harvard, MLA)</li>
           </ul>
-          <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
-          <div class="service-badge">Most Popular</div>
+          <a href="#contact" class="btn btn-primary btn-sm" data-i18n="services.cta">Get Started</a>
+          <div class="service-badge" data-i18n="s1.badge">Most Popular</div>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
           </div>
-          <h3>Conversation & Fluency</h3>
-          <p>Build confidence speaking English in everyday and professional situations through engaging, real-world practice.</p>
+          <h3 data-i18n="s2.title">Conversation & Fluency</h3>
+          <p data-i18n="s2.desc">Build confidence speaking English in everyday and professional situations through engaging, real-world practice.</p>
           <ul class="service-features">
-            <li>Pronunciation coaching</li>
-            <li>Vocabulary expansion</li>
-            <li>Presentation skills</li>
+            <li data-i18n="s2.f1">Pronunciation coaching</li>
+            <li data-i18n="s2.f2">Vocabulary expansion</li>
+            <li data-i18n="s2.f3">Presentation skills</li>
           </ul>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+          <a href="#contact" class="btn btn-outline btn-sm" data-i18n="services.cta">Get Started</a>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M5 4h-.5A2.5 2.5 0 0 0 2 6.5v13A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 19.5 4H19"/><path d="M9 12h6M9 16h4"/></svg>
           </div>
-          <h3>IELTS / TOEFL Prep</h3>
-          <p>Targeted exam preparation with proven strategies to maximise your score across all four skills.</p>
+          <h3 data-i18n="s3.title">IELTS / TOEFL Prep</h3>
+          <p data-i18n="s3.desc">Targeted exam preparation with proven strategies to maximise your score across all four skills.</p>
           <ul class="service-features">
-            <li>Full practice tests</li>
-            <li>Examiner-style feedback</li>
-            <li>Score improvement guarantee*</li>
+            <li data-i18n="s3.f1">Full practice tests</li>
+            <li data-i18n="s3.f2">Examiner-style feedback</li>
+            <li data-i18n="s3.f3">Score improvement guarantee*</li>
           </ul>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+          <a href="#contact" class="btn btn-outline btn-sm" data-i18n="services.cta">Get Started</a>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M2 12h20"/></svg>
           </div>
-          <h3>Business English</h3>
-          <p>Communicate professionally in meetings, emails, and presentations. Ideal for students entering the workforce.</p>
+          <h3 data-i18n="s4.title">Business English</h3>
+          <p data-i18n="s4.desc">Communicate professionally in meetings, emails, and presentations. Ideal for students entering the workforce.</p>
           <ul class="service-features">
-            <li>Professional email writing</li>
-            <li>Meeting & negotiation language</li>
-            <li>LinkedIn & resume writing</li>
+            <li data-i18n="s4.f1">Professional email writing</li>
+            <li data-i18n="s4.f2">Meeting & negotiation language</li>
+            <li data-i18n="s4.f3">LinkedIn & resume writing</li>
           </ul>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+          <a href="#contact" class="btn btn-outline btn-sm" data-i18n="services.cta">Get Started</a>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="10" y1="11" x2="16" y2="11"/></svg>
           </div>
-          <h3>General English</h3>
-          <p>A flexible programme covering all aspects of English for students at any level, from beginner to advanced.</p>
+          <h3 data-i18n="s5.title">General English</h3>
+          <p data-i18n="s5.desc">A flexible programme covering all aspects of English for students at any level, from beginner to advanced.</p>
           <ul class="service-features">
-            <li>Reading & comprehension</li>
-            <li>Listening skills</li>
-            <li>Grammar foundations</li>
+            <li data-i18n="s5.f1">Reading & comprehension</li>
+            <li data-i18n="s5.f2">Listening skills</li>
+            <li data-i18n="s5.f3">Grammar foundations</li>
           </ul>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+          <a href="#contact" class="btn btn-outline btn-sm" data-i18n="services.cta">Get Started</a>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M8 12h.01"/></svg>
           </div>
-          <h3>Assignment Feedback</h3>
-          <p>Get detailed, constructive feedback on your submitted work to improve your understanding and grades.</p>
+          <h3 data-i18n="s6.title">Assignment Feedback</h3>
+          <p data-i18n="s6.desc">Get detailed, constructive feedback on your submitted work to improve your understanding and grades.</p>
           <ul class="service-features">
-            <li>Line-by-line editing</li>
-            <li>Structural suggestions</li>
-            <li>Turnaround within 48 hours</li>
+            <li data-i18n="s6.f1">Line-by-line editing</li>
+            <li data-i18n="s6.f2">Structural suggestions</li>
+            <li data-i18n="s6.f3">Turnaround within 48 hours</li>
           </ul>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+          <a href="#contact" class="btn btn-outline btn-sm" data-i18n="services.cta">Get Started</a>
         </div>
       </div>
-      <p class="services-note">*Score improvement guarantee applies after a minimum 10-session IELTS/TOEFL package.</p>
+      <p class="services-note" data-i18n="services.note">*Score improvement guarantee applies after a minimum 10-session IELTS/TOEFL package.</p>
     </div>
   </section>
 
@@ -300,40 +308,40 @@
   <section class="how-it-works section" id="how-it-works">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Simple Process</div>
-        <h2 class="section-title">Getting Started is<br /><em>Easy</em></h2>
-        <p class="section-subtitle">From your first message to your first lesson — we make it simple to begin your English journey.</p>
+        <div class="section-tag" data-i18n="hiw.tag">Simple Process</div>
+        <h2 class="section-title" data-i18n-html="hiw.title.html">Getting Started is<br /><em>Easy</em></h2>
+        <p class="section-subtitle" data-i18n="hiw.subtitle">From your first message to your first lesson — we make it simple to begin your English journey.</p>
       </div>
       <div class="steps">
         <div class="step">
           <div class="step-number">01</div>
           <div class="step-content">
-            <h3>Book a Free Trial</h3>
-            <p>Fill in our short contact form and tell us about your goals. We'll match you with the best tutor for your needs and schedule.</p>
+            <h3 data-i18n="hiw.s1.title">Book a Free Trial</h3>
+            <p data-i18n="hiw.s1.desc">Fill in our short contact form and tell us about your goals. We'll match you with the best tutor for your needs and schedule.</p>
           </div>
           <div class="step-connector"></div>
         </div>
         <div class="step">
           <div class="step-number">02</div>
           <div class="step-content">
-            <h3>Assessment & Plan</h3>
-            <p>In your free 30-minute trial lesson, your tutor will assess your current level and co-create a personalised learning plan with you.</p>
+            <h3 data-i18n="hiw.s2.title">Assessment & Plan</h3>
+            <p data-i18n="hiw.s2.desc">In your free 30-minute trial lesson, your tutor will assess your current level and co-create a personalised learning plan with you.</p>
           </div>
           <div class="step-connector"></div>
         </div>
         <div class="step">
           <div class="step-number">03</div>
           <div class="step-content">
-            <h3>Start Your Sessions</h3>
-            <p>Book sessions at times that suit you. All lessons are held online via Zoom or Google Meet — learn from anywhere in the world.</p>
+            <h3 data-i18n="hiw.s3.title">Start Your Sessions</h3>
+            <p data-i18n="hiw.s3.desc">Book sessions at times that suit you. All lessons are held online via Zoom or Google Meet — learn from anywhere in the world.</p>
           </div>
           <div class="step-connector"></div>
         </div>
         <div class="step">
           <div class="step-number">04</div>
           <div class="step-content">
-            <h3>Track Your Progress</h3>
-            <p>Receive session summaries, progress reports, and homework after every lesson. See your improvement clearly over time.</p>
+            <h3 data-i18n="hiw.s4.title">Track Your Progress</h3>
+            <p data-i18n="hiw.s4.desc">Receive session summaries, progress reports, and homework after every lesson. See your improvement clearly over time.</p>
           </div>
         </div>
       </div>
@@ -344,9 +352,9 @@
   <section class="tutors section" id="tutors">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">The Pomelo English Method</div>
-        <h2 class="section-title">A structured curriculum,<br /><em>built for results.</em></h2>
-        <p class="section-subtitle">Unlike general tutoring, Pomelo English follows a purpose-built curriculum designed to move students through clear, measurable stages — from foundational skills to confident, independent English use.</p>
+        <div class="section-tag" data-i18n="curr.tag">The Pomelo English Method</div>
+        <h2 class="section-title" data-i18n-html="curr.title.html">A structured curriculum,<br /><em>built for results.</em></h2>
+        <p class="section-subtitle" data-i18n="curr.subtitle">Unlike general tutoring, Pomelo English follows a purpose-built curriculum designed to move students through clear, measurable stages — from foundational skills to confident, independent English use.</p>
       </div>
 
       <div class="curriculum-grid">
@@ -355,59 +363,59 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="10" y1="11" x2="16" y2="11"/></svg>
           </div>
           <div class="curriculum-num">01</div>
-          <h3>Language Foundations</h3>
-          <p>Grammar, sentence structure, and vocabulary built systematically — ensuring every student has a solid base before advancing.</p>
+          <h3 data-i18n="curr.c1.title">Language Foundations</h3>
+          <p data-i18n="curr.c1.desc">Grammar, sentence structure, and vocabulary built systematically — ensuring every student has a solid base before advancing.</p>
         </div>
         <div class="curriculum-card">
           <div class="curriculum-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
           </div>
           <div class="curriculum-num">02</div>
-          <h3>Academic Writing</h3>
-          <p>Essay structure, argumentation, and academic style — the skills that directly impact grades in school and university.</p>
+          <h3 data-i18n="curr.c2.title">Academic Writing</h3>
+          <p data-i18n="curr.c2.desc">Essay structure, argumentation, and academic style — the skills that directly impact grades in school and university.</p>
         </div>
         <div class="curriculum-card">
           <div class="curriculum-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </div>
           <div class="curriculum-num">03</div>
-          <h3>Reading & Analysis</h3>
-          <p>Critical reading, comprehension strategies, and analytical thinking — so students can engage with complex texts confidently.</p>
+          <h3 data-i18n="curr.c3.title">Reading & Analysis</h3>
+          <p data-i18n="curr.c3.desc">Critical reading, comprehension strategies, and analytical thinking — so students can engage with complex texts confidently.</p>
         </div>
         <div class="curriculum-card">
           <div class="curriculum-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
           </div>
           <div class="curriculum-num">04</div>
-          <h3>Oral Communication</h3>
-          <p>Pronunciation, spoken fluency, and presentation skills — building the confidence to speak clearly in any situation.</p>
+          <h3 data-i18n="curr.c4.title">Oral Communication</h3>
+          <p data-i18n="curr.c4.desc">Pronunciation, spoken fluency, and presentation skills — building the confidence to speak clearly in any situation.</p>
         </div>
         <div class="curriculum-card">
           <div class="curriculum-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M5 4h-.5A2.5 2.5 0 0 0 2 6.5v13A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 19.5 4H19"/><path d="M9 12h6M9 16h4"/></svg>
           </div>
           <div class="curriculum-num">05</div>
-          <h3>Exam Preparation</h3>
-          <p>Targeted IELTS and TOEFL strategies, timed practice, and examiner-aware feedback — built into the curriculum, not bolted on.</p>
+          <h3 data-i18n="curr.c5.title">Exam Preparation</h3>
+          <p data-i18n="curr.c5.desc">Targeted IELTS and TOEFL strategies, timed practice, and examiner-aware feedback — built into the curriculum, not bolted on.</p>
         </div>
         <div class="curriculum-card">
           <div class="curriculum-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
           <div class="curriculum-num">06</div>
-          <h3>Applied & Professional English</h3>
-          <p>Business writing, professional communication, and real-world English — for students preparing to enter the workforce.</p>
+          <h3 data-i18n="curr.c6.title">Applied & Professional English</h3>
+          <p data-i18n="curr.c6.desc">Business writing, professional communication, and real-world English — for students preparing to enter the workforce.</p>
         </div>
       </div>
 
       <div class="curriculum-note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        The Pomelo English curriculum is actively being developed and refined. Each student's programme is personalised to their level and goals within this framework.
+        <span data-i18n="curr.note">The Pomelo English curriculum is actively being developed and refined. Each student's programme is personalised to their level and goals within this framework.</span>
       </div>
 
       <div class="section-header" style="margin-top: 80px; margin-bottom: 36px;">
-        <div class="section-tag">Our Instructor</div>
-        <h2 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem);">Who delivers <em>the curriculum</em></h2>
+        <div class="section-tag" data-i18n="inst.tag">Our Instructor</div>
+        <h2 class="section-title" style="font-size: clamp(1.5rem, 3vw, 2rem);" data-i18n-html="inst.title.html">Who delivers <em>the curriculum</em></h2>
       </div>
       <div class="tutors-grid" style="max-width: 520px; margin: 0 auto; grid-template-columns: 1fr;">
         <div class="tutor-card">
@@ -416,8 +424,8 @@
           </div>
           <div class="tutor-info">
             <h3>Charlie Quan</h3>
-            <p class="tutor-role">Academic Writing & Essay Specialist</p>
-            <p class="tutor-bio">Charlie is a high-achieving academic with a genuine passion for English writing. Known for exceptional essay work and deep knowledge of the humanities, he brings clarity and enthusiasm to every session — breaking down complex writing techniques into steps students can immediately use.</p>
+            <p class="tutor-role" data-i18n="inst.tutor.role">Academic Writing & Essay Specialist</p>
+            <p class="tutor-bio" data-i18n="inst.tutor.bio">Charlie is a high-achieving academic with a genuine passion for English writing. Known for exceptional essay work and deep knowledge of the humanities, he brings clarity and enthusiasm to every session — breaking down complex writing techniques into steps students can immediately use.</p>
             <div class="tutor-tags">
               <span class="tag">Academic Writing</span>
               <span class="tag">Essay Craft</span>
@@ -432,8 +440,8 @@
       </div>
 
       <div class="tutors-cta">
-        <p>Sessions follow the Pomelo English curriculum and are personalised to your level, goals, and timeline.</p>
-        <a href="#contact" class="btn btn-primary">Book a Free Trial</a>
+        <p data-i18n="inst.cta.text">Sessions follow the Pomelo English curriculum and are personalised to your level, goals, and timeline.</p>
+        <a href="#contact" class="btn btn-primary" data-i18n="inst.cta.btn">Book a Free Trial</a>
       </div>
     </div>
   </section>
@@ -442,9 +450,9 @@
   <section class="testimonials section" id="testimonials">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Student Stories</div>
-        <h2 class="section-title">Real Results,<br /><em>Real Students</em></h2>
-        <p class="section-subtitle">Hear from international students who transformed their English with Pomelo English.</p>
+        <div class="section-tag" data-i18n="test.tag">Student Stories</div>
+        <h2 class="section-title" data-i18n-html="test.title.html">Real Results,<br /><em>Real Students</em></h2>
+        <p class="section-subtitle" data-i18n="test.subtitle">Hear from international students who transformed their English with Pomelo English.</p>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card featured-testimonial">
@@ -516,57 +524,57 @@
     <div class="container">
       <div class="contact-wrapper">
         <div class="contact-info">
-          <div class="section-tag">Get in Touch</div>
-          <h2 class="section-title">Book Your Free<br /><em>Trial Lesson</em></h2>
-          <p>Your first 30-minute session is completely free — no credit card required. Just fill in the form and we'll be in touch within 24 hours to confirm your booking.</p>
+          <div class="section-tag" data-i18n="contact.tag">Get in Touch</div>
+          <h2 class="section-title" data-i18n-html="contact.title.html">Book Your Free<br /><em>Trial Lesson</em></h2>
+          <p data-i18n="contact.desc">Your first 30-minute session is completely free — no credit card required. Just fill in the form and we'll be in touch within 24 hours to confirm your booking.</p>
           <div class="contact-points">
             <div class="contact-point">
               <span class="contact-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
               <div>
-                <strong>Flexible Scheduling</strong>
-                <p>Sessions available 7 days a week, including evenings and weekends (AEST).</p>
+                <strong data-i18n="contact.p1.title">Flexible Scheduling</strong>
+                <p data-i18n="contact.p1.desc">Sessions available 7 days a week, including evenings and weekends (AEST).</p>
               </div>
             </div>
             <div class="contact-point">
               <span class="contact-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
               <div>
-                <strong>100% Online</strong>
-                <p>Learn from anywhere in the world via Zoom or Google Meet.</p>
+                <strong data-i18n="contact.p2.title">100% Online</strong>
+                <p data-i18n="contact.p2.desc">Learn from anywhere in the world via Zoom or Google Meet.</p>
               </div>
             </div>
             <div class="contact-point">
               <span class="contact-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
               <div>
-                <strong>Quick Response</strong>
-                <p>We reply to all enquiries within 24 hours, usually much sooner.</p>
+                <strong data-i18n="contact.p3.title">Quick Response</strong>
+                <p data-i18n="contact.p3.desc">We reply to all enquiries within 24 hours, usually much sooner.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="contact-form-wrapper">
           <form class="contact-form" id="contact-form" novalidate>
-            <h3>Book Your Free Trial</h3>
+            <h3 data-i18n="form.title">Book Your Free Trial</h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="firstName">First Name *</label>
+                <label for="firstName" data-i18n="form.firstName">First Name *</label>
                 <input type="text" id="firstName" name="firstName" placeholder="e.g. Yuki" required />
                 <span class="form-error" id="firstNameError"></span>
               </div>
               <div class="form-group">
-                <label for="lastName">Last Name *</label>
+                <label for="lastName" data-i18n="form.lastName">Last Name *</label>
                 <input type="text" id="lastName" name="lastName" placeholder="e.g. Tanaka" required />
                 <span class="form-error" id="lastNameError"></span>
               </div>
             </div>
             <div class="form-group">
-              <label for="email">Email Address *</label>
+              <label for="email" data-i18n="form.email">Email Address *</label>
               <input type="email" id="email" name="email" placeholder="your@email.com" required />
               <span class="form-error" id="emailError"></span>
             </div>
             <div class="form-group">
-              <label for="country">Country of Origin</label>
+              <label for="country" data-i18n="form.country">Country of Origin</label>
               <select id="country" name="country">
-                <option value="">Select your country…</option>
+                <option value="" data-i18n="form.country.ph">Select your country…</option>
                 <option>Japan</option>
                 <option>South Korea</option>
                 <option>China</option>
@@ -582,9 +590,9 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="service">I'm interested in… *</label>
+              <label for="service" data-i18n="form.service">I'm interested in… *</label>
               <select id="service" name="service" required>
-                <option value="">Choose a service…</option>
+                <option value="" data-i18n="form.service.ph">Choose a service…</option>
                 <option>Academic Writing</option>
                 <option>Conversation & Fluency</option>
                 <option>IELTS / TOEFL Preparation</option>
@@ -596,19 +604,19 @@
               <span class="form-error" id="serviceError"></span>
             </div>
             <div class="form-group">
-              <label for="message">Tell us about your goals</label>
-              <textarea id="message" name="message" rows="4" placeholder="e.g. I'm preparing for IELTS in 3 months and need to improve my writing score from 6.0 to 7.0…"></textarea>
+              <label for="message" data-i18n="form.message">Tell us about your goals</label>
+              <textarea id="message" name="message" rows="4" data-i18n-placeholder="form.message.ph" placeholder="e.g. I'm preparing for IELTS in 3 months and need to improve my writing score from 6.0 to 7.0…"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-              <span class="btn-text">Book My Free Trial →</span>
-              <span class="btn-loading" style="display:none;">Sending…</span>
+              <span class="btn-text" data-i18n="form.submit">Book My Free Trial →</span>
+              <span class="btn-loading" style="display:none;" data-i18n="form.sending">Sending…</span>
             </button>
-            <p class="form-disclaimer">By submitting this form you agree to our Privacy Policy. We will never share your information with third parties.</p>
+            <p class="form-disclaimer" data-i18n="form.disclaimer">By submitting this form you agree to our Privacy Policy. We will never share your information with third parties.</p>
           </form>
           <div class="form-success" id="form-success" style="display:none;">
             <div class="success-icon">🎉</div>
-            <h3>You're booked in!</h3>
-            <p>Thank you for reaching out. We'll contact you within 24 hours to confirm your free trial lesson. We can't wait to meet you!</p>
+            <h3 data-i18n="form.success.title">You're booked in!</h3>
+            <p data-i18n="form.success.desc">Thank you for reaching out. We'll contact you within 24 hours to confirm your free trial lesson. We can't wait to meet you!</p>
           </div>
         </div>
       </div>
@@ -623,36 +631,36 @@
           <span class="logo-icon">✦</span>
           <span class="logo-text">Pomelo<span class="logo-accent"> English</span></span>
         </a>
-        <p>Personalised English tutoring for international students, wherever you are in the world.</p>
+        <p data-i18n="footer.brand.desc">Personalised English tutoring for international students, wherever you are in the world.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Services</h4>
-          <a href="#services">Academic Writing</a>
-          <a href="#services">Conversation & Fluency</a>
-          <a href="#services">IELTS / TOEFL Prep</a>
-          <a href="#services">Business English</a>
+          <h4 data-i18n="footer.services">Services</h4>
+          <a href="#services" data-i18n="s1.title">Academic Writing</a>
+          <a href="#services" data-i18n="s2.title">Conversation & Fluency</a>
+          <a href="#services" data-i18n="s3.title">IELTS / TOEFL Prep</a>
+          <a href="#services" data-i18n="s4.title">Business English</a>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#tutors">Meet Our Tutors</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#testimonials">Student Stories</a>
-          <a href="#contact">Contact Us</a>
+          <h4 data-i18n="footer.company">Company</h4>
+          <a href="#tutors" data-i18n="footer.c.tutors">Meet Our Tutors</a>
+          <a href="#how-it-works" data-i18n="footer.c.hiw">How It Works</a>
+          <a href="#testimonials" data-i18n="footer.c.stories">Student Stories</a>
+          <a href="#contact" data-i18n="footer.c.contact">Contact Us</a>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact">Contact</h4>
           <a href="mailto:hello@pomeloEnglish.com">hello@pomeloEnglish.com</a>
-          <p>Sessions available 7 days/week<br />(AEST, UTC+10)</p>
+          <p data-i18n="footer.hours">Sessions available 7 days/week<br />(AEST, UTC+10)</p>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2026 Pomelo English. All rights reserved.</p>
+        <p data-i18n="footer.copy">© 2026 Pomelo English. All rights reserved.</p>
         <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms of Service</a>
         </div>
       </div>
     </div>
