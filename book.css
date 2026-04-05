@@ -411,3 +411,273 @@
   flex-shrink: 0;
 }
 .btb-btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+/* ===================== BOOKING FAQ ===================== */
+.book-faq-section {
+  padding: 72px 0 80px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border-light);
+}
+.book-faq-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin: 12px 0 40px;
+  line-height: 1.25;
+}
+.book-faq-title em {
+  font-style: italic;
+  color: var(--primary);
+  font-family: var(--font-display);
+}
+.book-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.book-faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 28px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.book-faq-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.book-faq-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.book-faq-item p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .book-faq-grid { grid-template-columns: 1fr; }
+}
+
+/* ===================== PAYMENT MODAL ===================== */
+.pmodal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 9, 26, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+.pmodal-overlay.pmodal-visible { opacity: 1; }
+
+.pmodal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 36px 36px 32px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.28), 0 8px 24px rgba(79,70,229,0.15);
+  transform: translateY(22px) scale(0.97);
+  transition: transform 0.32s cubic-bezier(0.34, 1.4, 0.64, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.pmodal-overlay.pmodal-visible .pmodal-card {
+  transform: translateY(0) scale(1);
+}
+
+.pmodal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+.pmodal-close:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.pmodal-plan-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+.pmodal-plan-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.pmodal-plan-price {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.pmodal-intro {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.pmodal-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.pmodal-method {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+.pmodal-method-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+.pmodal-email-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pmodal-email-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  word-break: break-all;
+  flex: 1;
+}
+.pmodal-copy-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 4px 11px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+  letter-spacing: 0.02em;
+}
+.pmodal-copy-btn:hover { background: var(--primary-dark); }
+
+.pmodal-qr-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1.5px dashed var(--border);
+  border-radius: 10px;
+  padding: 14px 8px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  min-height: 86px;
+}
+.pmodal-qr-img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.pmodal-notify-trigger { width: 100%; }
+
+/* Notification form */
+.pmodal-notify-form { margin-top: 2px; }
+.pmodal-form-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+.pmodal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 13px;
+}
+.pmodal-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.pmodal-field input,
+.pmodal-field select {
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg-soft);
+  transition: border-color 0.2s ease;
+}
+.pmodal-field input:focus,
+.pmodal-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+
+/* Success state */
+.pmodal-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 24px 0 8px;
+}
+.pmodal-success p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 320px;
+}
+
+@media (max-width: 540px) {
+  .pmodal-card { padding: 28px 22px 24px; }
+  .pmodal-methods { grid-template-columns: 1fr; }
+}

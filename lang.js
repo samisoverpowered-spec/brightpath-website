@@ -369,6 +369,30 @@ var TRANSLATIONS = {
     'book.secure': ' We\'ll respond within 24 hours',
     'book.reassurance.html': 'Payment via <strong>e-Transfer</strong> or <strong>WeChat Pay</strong> — details sent after you get in touch. All prices in CAD.',
     'book.pricing.link': 'View full pricing details →',
+
+    // Payment modal
+    'modal.intro': 'To book this plan, please send payment via <strong>Interac E-transfer</strong> or <strong>WeChat Pay</strong>.',
+    'modal.etransfer.label': 'Interac E-transfer',
+    'modal.wechat.label': 'WeChat Pay',
+    'modal.wechat.placeholder': 'WeChat Pay QR Code — coming soon',
+    'modal.copy.btn': 'Copy',
+    'modal.notify.btn': 'I\'ve sent payment — notify me',
+    'modal.form.heading': 'Let us know you\'ve paid',
+    'modal.form.name': 'Your name',
+    'modal.form.email': 'Your email',
+    'modal.form.plan': 'Which plan did you pay for?',
+    'modal.form.submit': 'Send Notification →',
+    'modal.success': 'We\'ve got your details! We\'ll confirm your booking within 24 hours.',
+
+    // Booking FAQ
+    'bookfaq.tag': 'Booking Questions',
+    'bookfaq.title.html': 'Everything you need <em>to know</em>',
+    'bookfaq.q1': 'How do I confirm my booking?',
+    'bookfaq.a1': 'Send payment first, then fill in the notification form. We\'ll confirm within 24 hours.',
+    'bookfaq.q2': 'What if I need to cancel?',
+    'bookfaq.a2': 'Cancellations with 24 hours notice receive a full refund.',
+    'bookfaq.q3': 'Why e-transfer and WeChat Pay?',
+    'bookfaq.a3': 'We keep things simple and fee-free so more of your money goes toward learning.',
   },
 
   zh: {
@@ -728,6 +752,30 @@ var TRANSLATIONS = {
     'book.secure': ' 我们将在24小时内回复',
     'book.reassurance.html': '支持<strong>电子转账</strong>或<strong>微信支付</strong>——联系后我们将发送付款详情。所有价格以加拿大元（CAD）计算。',
     'book.pricing.link': '查看完整价格详情 →',
+
+    // Payment modal
+    'modal.intro': '请通过<strong>Interac 电子转账</strong>或<strong>微信支付</strong>完成付款以预约本课程。',
+    'modal.etransfer.label': 'Interac 电子转账',
+    'modal.wechat.label': '微信支付',
+    'modal.wechat.placeholder': '微信支付二维码——即将上线',
+    'modal.copy.btn': '复制',
+    'modal.notify.btn': '我已付款——通知我',
+    'modal.form.heading': '告诉我们你已付款',
+    'modal.form.name': '你的姓名',
+    'modal.form.email': '你的邮箱',
+    'modal.form.plan': '你支付了哪个方案？',
+    'modal.form.submit': '发送通知 →',
+    'modal.success': '我们已收到你的信息！将在24小时内确认你的预约。',
+
+    // Booking FAQ
+    'bookfaq.tag': '预约常见问题',
+    'bookfaq.title.html': '你需要了解的<em>一切</em>',
+    'bookfaq.q1': '如何确认我的预约？',
+    'bookfaq.a1': '先完成付款，然后填写通知表格。我们将在24小时内确认。',
+    'bookfaq.q2': '如果我需要取消怎么办？',
+    'bookfaq.a2': '提前24小时取消可获得全额退款。',
+    'bookfaq.q3': '为什么使用电子转账和微信支付？',
+    'bookfaq.a3': '我们保持简单零手续费，让你的钱更多地用于学习。',
   }
 };
 
