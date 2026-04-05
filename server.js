@@ -16,6 +16,23 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
 // ─────────────────────────────────────────────────────────
+//  POST /api/contact  — student enquiry form → email
+// ─────────────────────────────────────────────────────────
+app.post('/api/contact', async (req, res) => {
+  const { name, email, plan, goals, program, level, frequency, notes } = req.body || {};
+  if (!name?.trim() || !email?.trim() || !goals?.trim() || !program?.trim() || !level) {
+    return res.status(400).json({ error: 'Please fill in all required fields.' });
+  }
+  try {
+    const contactHandler = require('./api/contact');
+    return contactHandler(req, res);
+  } catch (err) {
+    console.error('Contact handler error:', err);
+    res.status(500).json({ error: 'Failed to send. Please try again.' });
+  }
+});
+
+// ─────────────────────────────────────────────────────────
 //  PACKAGES
 // ─────────────────────────────────────────────────────────
 const PACKAGES = {

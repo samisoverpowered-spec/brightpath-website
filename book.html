@@ -229,7 +229,7 @@
     </div>
   </section>
 
-  <!-- PAYMENT MODAL -->
+  <!-- ENQUIRY MODAL -->
   <div class="pmodal-overlay" id="pmodal" role="dialog" aria-modal="true" aria-labelledby="pmodal-plan-name" style="display:none;">
     <div class="pmodal-card">
       <button class="pmodal-close" id="pmodal-close" aria-label="Close">
@@ -242,65 +242,98 @@
         <span class="pmodal-plan-price" id="pmodal-plan-price"></span>
       </div>
 
-      <!-- Payment instructions -->
-      <div id="pmodal-instructions">
-        <p class="pmodal-intro" data-i18n-html="modal.intro">To book this plan, please send payment via <strong>Interac E-transfer</strong> or <strong>WeChat Pay</strong>.</p>
-        <div class="pmodal-methods">
-          <!-- E-Transfer -->
-          <div class="pmodal-method">
-            <div class="pmodal-method-label">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-              <span data-i18n="modal.etransfer.label">Interac E-transfer</span>
-            </div>
-            <div class="pmodal-email-row">
-              <span class="pmodal-email-value">hello@pomeloEnglish.com</span>
-              <button type="button" class="pmodal-copy-btn" data-copy="hello@pomeloEnglish.com" data-i18n="modal.copy.btn">Copy</button>
-            </div>
-          </div>
-          <!-- WeChat Pay -->
-          <div class="pmodal-method">
-            <div class="pmodal-method-label">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm4 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/><path d="M12 2C6.48 2 2 5.92 2 10.8c0 2.93 1.5 5.54 3.86 7.24L5 21l3.32-1.66A11 11 0 0 0 12 19.6c5.52 0 10-3.92 10-8.8S17.52 2 12 2z"/></svg>
-              <span data-i18n="modal.wechat.label">WeChat Pay</span>
-            </div>
-            <!-- Replace this div with <img src="wechat-qr.png" alt="WeChat Pay QR Code" class="pmodal-qr-img"> when ready -->
-            <div class="pmodal-qr-placeholder">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="5" y="5" width="3" height="3" fill="currentColor" stroke="none"/><rect x="16" y="5" width="3" height="3" fill="currentColor" stroke="none"/><rect x="5" y="16" width="3" height="3" fill="currentColor" stroke="none"/><line x1="14" y1="14" x2="17" y2="14"/><line x1="20" y1="14" x2="20" y2="14"/><line x1="14" y1="17" x2="14" y2="20"/><line x1="17" y1="17" x2="20" y2="17"/><line x1="20" y1="20" x2="20" y2="20"/></svg>
-              <span data-i18n="modal.wechat.placeholder">WeChat Pay QR Code — coming soon</span>
-            </div>
-          </div>
-        </div>
-        <button type="button" class="btn btn-primary pmodal-notify-trigger" id="pmodal-notify-trigger" data-i18n="modal.notify.btn">
-          I've sent payment — notify me
-        </button>
+      <!-- No-payment note + WeChat -->
+      <div class="pmodal-no-payment-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>No payment yet — fill in the form and we'll discuss everything over email or WeChat first.</span>
       </div>
 
-      <!-- Notification form -->
-      <form class="pmodal-notify-form" id="pmodal-notify-form" style="display:none;" novalidate>
-        <h3 class="pmodal-form-heading" data-i18n="modal.form.heading">Let us know you've paid</h3>
-        <div class="pmodal-field">
-          <label for="pmodal-name" data-i18n="modal.form.name">Your name</label>
-          <input type="text" id="pmodal-name" required autocomplete="name" />
+      <!-- WeChat add-me row -->
+      <div class="pmodal-wechat-row">
+        <div class="pmodal-wechat-text">
+          <div class="pmodal-method-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm4 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/><path d="M12 2C6.48 2 2 5.92 2 10.8c0 2.93 1.5 5.54 3.86 7.24L5 21l3.32-1.66A11 11 0 0 0 12 19.6c5.52 0 10-3.92 10-8.8S17.52 2 12 2z"/></svg>
+            <strong>Add me on WeChat</strong>
+          </div>
+          <p class="pmodal-wechat-desc">Scan the QR code to add your tutor directly on WeChat for a quick chat.</p>
         </div>
-        <div class="pmodal-field">
-          <label for="pmodal-email-input" data-i18n="modal.form.email">Your email</label>
-          <input type="email" id="pmodal-email-input" required autocomplete="email" />
+        <!-- Replace src with your real WeChat QR image when ready -->
+        <!-- <img src="wechat-add-qr.png" alt="WeChat QR Code" class="pmodal-qr-img"> -->
+        <div class="pmodal-qr-placeholder">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="5" y="5" width="3" height="3" fill="currentColor" stroke="none"/><rect x="16" y="5" width="3" height="3" fill="currentColor" stroke="none"/><rect x="5" y="16" width="3" height="3" fill="currentColor" stroke="none"/><line x1="14" y1="14" x2="17" y2="14"/><line x1="20" y1="14" x2="20" y2="14"/><line x1="14" y1="17" x2="14" y2="20"/><line x1="17" y1="17" x2="20" y2="17"/><line x1="20" y1="20" x2="20" y2="20"/></svg>
+          <span>WeChat QR<br/>coming soon</span>
         </div>
-        <div class="pmodal-field">
-          <label for="pmodal-plan-select" data-i18n="modal.form.plan">Which plan did you pay for?</label>
-          <select id="pmodal-plan-select">
-            <option value="Single Session — CA$40">Single Session — CA$40</option>
-            <option value="5-Session Bundle — CA$170">5-Session Bundle — CA$170</option>
-            <option value="Full Term Plan — CA$500">Full Term Plan — CA$500</option>
-          </select>
+      </div>
+
+      <!-- Enquiry form -->
+      <form id="pmodal-notify-form" novalidate>
+        <p class="pmodal-form-heading">Or send a message — we'll reply within 24 hours</p>
+
+        <div class="pmodal-form-row">
+          <div class="pmodal-field">
+            <label for="pmodal-name">Full name <span class="req">*</span></label>
+            <input type="text" id="pmodal-name" placeholder="e.g. Mei Lin" required autocomplete="name" />
+          </div>
+          <div class="pmodal-field">
+            <label for="pmodal-email-input">Email address <span class="req">*</span></label>
+            <input type="email" id="pmodal-email-input" placeholder="you@example.com" required autocomplete="email" />
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="modal.form.submit">Send Notification →</button>
+
+        <div class="pmodal-field">
+          <label for="pmodal-goals">What do you want to achieve? <span class="req">*</span></label>
+          <textarea id="pmodal-goals" rows="3" placeholder="e.g. Improve my academic essay writing, pass IELTS with 7.0+, speak more confidently in meetings…" required></textarea>
+        </div>
+
+        <div class="pmodal-field">
+          <label for="pmodal-program">What program or goal are you working towards? <span class="req">*</span></label>
+          <textarea id="pmodal-program" rows="2" placeholder="e.g. Year 2 Computer Science at UBC, applying for a Master's in Finance, starting a new job in Canada…" required></textarea>
+        </div>
+
+        <div class="pmodal-form-row">
+          <div class="pmodal-field">
+            <label for="pmodal-level">Current English level <span class="req">*</span></label>
+            <select id="pmodal-level" required>
+              <option value="">Select…</option>
+              <option>Beginner</option>
+              <option>Pre-Intermediate</option>
+              <option>Intermediate</option>
+              <option>Upper-Intermediate</option>
+              <option>Advanced</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="pmodal-field">
+            <label for="pmodal-frequency">Sessions per week</label>
+            <select id="pmodal-frequency">
+              <option value="">Not sure yet</option>
+              <option>1 session / week</option>
+              <option>2 sessions / week</option>
+              <option>3+ sessions / week</option>
+              <option>Flexible — depends on schedule</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pmodal-field">
+          <label for="pmodal-notes">Anything else you'd like to mention? <span class="pmodal-optional">(optional)</span></label>
+          <textarea id="pmodal-notes" rows="2" placeholder="Any deadlines, specific topics, previous tutoring experience, questions…"></textarea>
+        </div>
+
+        <p id="pmodal-error" class="pmodal-error" style="display:none;"></p>
+
+        <button type="submit" class="btn btn-primary pmodal-submit-btn" id="pmodal-submit">
+          <span class="pmodal-submit-text">Send Message →</span>
+          <span class="pmodal-submit-loading" style="display:none;">
+            <span class="pay-spinner"></span> Sending…
+          </span>
+        </button>
       </form>
 
       <!-- Success state -->
       <div class="pmodal-success" id="pmodal-success" style="display:none;">
         <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
-        <p data-i18n="modal.success">We've got your details! We'll confirm your booking within 24 hours.</p>
+        <p>Message sent! We'll be in touch within 24 hours to discuss next steps.</p>
       </div>
     </div>
   </div>

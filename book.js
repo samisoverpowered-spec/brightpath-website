@@ -23,50 +23,38 @@ if (pkgParam === 'single') {
   document.getElementById('pkg-single')?.classList.add('ring-highlight');
 }
 
-// ===================== PAYMENT MODAL =====================
-const pmodal          = document.getElementById('pmodal');
-const pmodalClose     = document.getElementById('pmodal-close');
-const pmodalPlanName  = document.getElementById('pmodal-plan-name');
-const pmodalPlanPrice = document.getElementById('pmodal-plan-price');
-const pmodalInstr     = document.getElementById('pmodal-instructions');
-const pmodalForm      = document.getElementById('pmodal-notify-form');
-const pmodalSuccess   = document.getElementById('pmodal-success');
-const pmodalSelect    = document.getElementById('pmodal-plan-select');
+// ===================== ENQUIRY MODAL =====================
+const pmodal         = document.getElementById('pmodal');
+const pmodalClose    = document.getElementById('pmodal-close');
+const pmodalPlanName = document.getElementById('pmodal-plan-name');
+const pmodalPlanPrice= document.getElementById('pmodal-plan-price');
+const pmodalForm     = document.getElementById('pmodal-notify-form');
+const pmodalSuccess  = document.getElementById('pmodal-success');
+const pmodalError    = document.getElementById('pmodal-error');
 
-// Map plan IDs to their select-option values
-const PLAN_SELECT_MAP = {
-  single: 'Single Session — CA$40',
-  bundle: '5-Session Bundle — CA$170',
-  term:   'Full Term Plan — CA$500',
-};
+// Tracks which plan was clicked
+let activePlan = '';
 
 function openModal(planId) {
-  // Grab live text from the card so it reflects the active language
   const card  = document.querySelector('[data-plan-id="' + planId + '"]')?.closest('.book-package-card');
   const name  = card?.querySelector('h2')?.textContent.trim() || '';
   const price = 'CA$' + (card?.querySelector('.bpc-amount')?.textContent.trim() || '');
 
   pmodalPlanName.textContent  = name;
   pmodalPlanPrice.textContent = price;
+  activePlan = name + ' — ' + price;
 
-  // Pre-select this plan in the notify form
-  if (pmodalSelect) {
-    for (let i = 0; i < pmodalSelect.options.length; i++) {
-      if (pmodalSelect.options[i].value === PLAN_SELECT_MAP[planId]) {
-        pmodalSelect.selectedIndex = i;
-        break;
-      }
-    }
-  }
-
-  // Reset to instructions view
-  pmodalInstr.style.display   = '';
-  pmodalForm.style.display    = 'none';
+  // Reset form to initial state
+  pmodalForm.reset();
+  pmodalForm.style.display    = '';
   pmodalSuccess.style.display = 'none';
+  if (pmodalError) pmodalError.style.display = 'none';
 
   pmodal.style.display = 'flex';
   requestAnimationFrame(() => pmodal.classList.add('pmodal-visible'));
   document.body.style.overflow = 'hidden';
+  // Focus first field
+  setTimeout(() => document.getElementById('pmodal-name')?.focus(), 280);
 }
 
 function closeModal() {
@@ -87,51 +75,63 @@ pmodalClose.addEventListener('click', closeModal);
 pmodal.addEventListener('click', e => { if (e.target === pmodal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-// Copy email to clipboard
-document.querySelectorAll('.pmodal-copy-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    navigator.clipboard.writeText(btn.dataset.copy).then(() => {
-      const orig = btn.textContent;
-      btn.textContent = 'Copied!';
-      setTimeout(() => { btn.textContent = orig; }, 1600);
-    }).catch(() => {
-      // Fallback for browsers without clipboard API
-      prompt('Copy this email address:', btn.dataset.copy);
-    });
-  });
-});
-
-// Show notify form
-document.getElementById('pmodal-notify-trigger').addEventListener('click', () => {
-  pmodalInstr.style.display = 'none';
-  pmodalForm.style.display  = 'block';
-});
-
-// Submit notify form — composes a mailto so the notification lands in the owner's inbox
-pmodalForm.addEventListener('submit', e => {
+// Submit enquiry form — sends to /api/contact, emails samuelwang77@outlook.com
+pmodalForm.addEventListener('submit', async e => {
   e.preventDefault();
-  const name  = document.getElementById('pmodal-name').value.trim();
-  const email = document.getElementById('pmodal-email-input').value.trim();
-  const plan  = pmodalSelect.value;
 
-  if (!name || !email || !plan) return;
+  const name      = document.getElementById('pmodal-name').value.trim();
+  const email     = document.getElementById('pmodal-email-input').value.trim();
+  const goals     = document.getElementById('pmodal-goals').value.trim();
+  const program   = document.getElementById('pmodal-program').value.trim();
+  const level     = document.getElementById('pmodal-level').value;
+  const frequency = document.getElementById('pmodal-frequency').value;
+  const notes     = document.getElementById('pmodal-notes').value.trim();
 
-  const subject = encodeURIComponent('Payment Notification: ' + plan);
-  const body    = encodeURIComponent(
-    'Hi,\n\n' +
-    'A student has sent payment and is waiting for booking confirmation.\n\n' +
-    'Name:  ' + name  + '\n' +
-    'Email: ' + email + '\n' +
-    'Plan:  ' + plan  + '\n\n' +
-    'Please reply to their email to confirm the booking.\n'
-  );
+  if (!name || !email || !goals || !program || !level) {
+    showModalError('Please fill in all required fields (marked with *).');
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showModalError('Please enter a valid email address.');
+    return;
+  }
 
-  window.open('mailto:hello@pomeloEnglish.com?subject=' + subject + '&body=' + body, '_self');
+  // Loading state
+  const submitBtn  = document.getElementById('pmodal-submit');
+  const submitText = submitBtn.querySelector('.pmodal-submit-text');
+  const submitLoad = submitBtn.querySelector('.pmodal-submit-loading');
+  submitText.style.display = 'none';
+  submitLoad.style.display = 'flex';
+  submitBtn.disabled = true;
+  if (pmodalError) pmodalError.style.display = 'none';
 
-  // Show success state
-  pmodalForm.style.display    = 'none';
-  pmodalSuccess.style.display = 'flex';
+  try {
+    const res = await fetch('/api/contact', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, plan: activePlan, goals, program, level, frequency, notes }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+
+    // Success
+    pmodalForm.style.display    = 'none';
+    pmodalSuccess.style.display = 'flex';
+  } catch (err) {
+    showModalError(err.message || 'Failed to send. Please try again.');
+  } finally {
+    submitText.style.display = '';
+    submitLoad.style.display = 'none';
+    submitBtn.disabled = false;
+  }
 });
+
+function showModalError(msg) {
+  if (!pmodalError) return;
+  pmodalError.textContent    = msg;
+  pmodalError.style.display  = 'block';
+  pmodalError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
 // ===================== SCROLL ANIMATIONS =====================
 const observer = new IntersectionObserver((entries) => {
