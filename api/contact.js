@@ -13,34 +13,46 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Please fill in all required fields.' });
   }
 
-  // Dev fallback — if no API key just log and succeed
-  if (!process.env.RESEND_API_KEY) {
-    console.log('📬 New enquiry (no RESEND_API_KEY):', { name, email, plan });
-    return res.status(200).json({ ok: true });
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('RESEND_API_KEY is not set in environment variables');
+    return res.status(500).json({ error: 'Server configuration error — email could not be sent. Please contact samuelwang77@outlook.com directly.' });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const resend = new Resend(apiKey);
 
   try {
-    await resend.emails.send({
-      from: 'Pomelo English Website <onboarding@resend.dev>',
+    const result = await resend.emails.send({
+      // Uses Resend's shared sender — works with any verified recipient email
+      from: 'Pomelo English <onboarding@resend.dev>',
       to: ['samuelwang77@outlook.com'],
       reply_to: email,
-      subject: `New Student Enquiry — ${plan} — ${name}`,
+      subject: `New Student Enquiry — ${name}`,
       html: buildEmail({ name, email, plan, goals, program, level, frequency, notes }),
     });
+
+    // Resend returns { id } on success, or { error } on failure
+    if (result.error) {
+      console.error('Resend API error:', JSON.stringify(result.error));
+      return res.status(500).json({
+        error: `Email service error: ${result.error.message || JSON.stringify(result.error)}`,
+      });
+    }
+
+    console.log('Email sent successfully, id:', result.data?.id);
     res.status(200).json({ ok: true });
+
   } catch (err) {
-    console.error('Resend error:', err);
-    res.status(500).json({ error: 'Failed to send. Please try again.' });
+    console.error('Resend exception:', err?.message || err);
+    res.status(500).json({ error: `Failed to send: ${err?.message || 'Unknown error'}` });
   }
 };
 
 function buildEmail({ name, email, plan, goals, program, level, frequency, notes }) {
   const row = (label, value) => value ? `
     <tr>
-      <td style="padding:10px 16px;font-size:0.82rem;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:0.06em;width:38%;vertical-align:top;">${label}</td>
-      <td style="padding:10px 16px;font-size:0.92rem;color:#1f2937;vertical-align:top;">${value.replace(/\n/g, '<br/>')}</td>
+      <td style="padding:10px 16px;font-size:0.82rem;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:0.06em;width:38%;vertical-align:top;border-bottom:1px solid #f3f4f6;">${label}</td>
+      <td style="padding:10px 16px;font-size:0.92rem;color:#1f2937;vertical-align:top;border-bottom:1px solid #f3f4f6;">${String(value).replace(/\n/g, '<br/>')}</td>
     </tr>` : '';
 
   return `<!DOCTYPE html>
@@ -58,12 +70,12 @@ function buildEmail({ name, email, plan, goals, program, level, frequency, notes
         <tbody>
           ${row('Name', name)}
           ${row('Email', `<a href="mailto:${email}" style="color:#4f46e5;">${email}</a>`)}
-          ${row('Plan interested in', plan)}
+          ${row('Plan interested in', plan || 'Not specified')}
           ${row('Goals', goals)}
           ${row('Program / working towards', program)}
           ${row('Current English level', level)}
-          ${row('Sessions per week', frequency)}
-          ${row('Additional notes', notes)}
+          ${row('Sessions per week', frequency || 'Not specified')}
+          ${row('Additional notes', notes || '—')}
         </tbody>
       </table>
       <div style="margin-top:28px;text-align:center;">
@@ -71,7 +83,7 @@ function buildEmail({ name, email, plan, goals, program, level, frequency, notes
       </div>
     </div>
     <div style="background:#f9fafb;border-top:1px solid #e5e7eb;padding:16px 40px;text-align:center;">
-      <p style="font-size:0.75rem;color:#9ca3af;margin:0;">© 2026 Pomelo English · This notification was sent from your website contact form</p>
+      <p style="font-size:0.75rem;color:#9ca3af;margin:0;">© 2026 Pomelo English · Sent from your website contact form</p>
     </div>
   </div>
 </body>
