@@ -114,7 +114,9 @@ pmodalForm.addEventListener('submit', async e => {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Something went wrong.');
 
-    // Success
+    // Success — show their email in the confirmation box
+    const successEmailEl = document.getElementById('pmodal-success-email');
+    if (successEmailEl) successEmailEl.textContent = email;
     pmodalForm.style.display    = 'none';
     pmodalSuccess.style.display = 'flex';
   } catch (err) {
