@@ -16,23 +16,23 @@ module.exports = async function handler(req, res) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error('RESEND_API_KEY is not set in environment variables');
-    return res.status(500).json({ error: 'Server configuration error — email could not be sent. Please contact samuelwang77@outlook.com directly.' });
+    return res.status(500).json({ error: 'Server configuration error — email could not be sent. Please contact us directly.' });
   }
 
   const resend = new Resend(apiKey);
 
-  try {
-    // NOTIFY_EMAIL must match the email used to sign up for Resend (sandbox restriction)
-    // Once you verify pomeloenglish.com in Resend, you can set this to any address
-    const notifyEmail = process.env.NOTIFY_EMAIL;
-    if (!notifyEmail) {
-      console.error('NOTIFY_EMAIL env var is not set');
-      return res.status(500).json({ error: 'Server configuration error — NOTIFY_EMAIL not set.' });
-    }
+  // Both addresses receive the notification.
+  // Note: Resend sandbox only allows sending to the account's verified email.
+  // Once pomeloenglish.com is verified in Resend these can be any address.
+  const notifyAddresses = [
+    'samisoverpowered@gmail.com',
+    'pomeloenglish3300@gmail.com',
+  ];
 
+  try {
     const result = await resend.emails.send({
       from: 'Pomelo English <onboarding@resend.dev>',
-      to: [notifyEmail],
+      to: notifyAddresses,
       reply_to: email,
       subject: `New Student Enquiry — ${name}`,
       html: buildEmail({ name, email, plan, goals, program, level, frequency, notes }),

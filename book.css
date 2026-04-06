@@ -530,6 +530,7 @@
   justify-content: space-between;
   gap: 12px;
   padding-bottom: 20px;
+  padding-right: 44px; /* stop price from going under the X button */
   margin-bottom: 22px;
   border-bottom: 1px solid var(--border);
 }
