@@ -22,10 +22,17 @@ module.exports = async function handler(req, res) {
   const resend = new Resend(apiKey);
 
   try {
+    // NOTIFY_EMAIL must match the email used to sign up for Resend (sandbox restriction)
+    // Once you verify pomeloenglish.com in Resend, you can set this to any address
+    const notifyEmail = process.env.NOTIFY_EMAIL;
+    if (!notifyEmail) {
+      console.error('NOTIFY_EMAIL env var is not set');
+      return res.status(500).json({ error: 'Server configuration error — NOTIFY_EMAIL not set.' });
+    }
+
     const result = await resend.emails.send({
-      // Uses Resend's shared sender — works with any verified recipient email
       from: 'Pomelo English <onboarding@resend.dev>',
-      to: ['samuelwang77@outlook.com'],
+      to: [notifyEmail],
       reply_to: email,
       subject: `New Student Enquiry — ${name}`,
       html: buildEmail({ name, email, plan, goals, program, level, frequency, notes }),
