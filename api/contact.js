@@ -24,10 +24,10 @@ module.exports = async function handler(req, res) {
   // Both addresses receive the notification.
   // Note: Resend sandbox only allows sending to the account's verified email.
   // Once pomeloenglish.com is verified in Resend these can be any address.
-  // Resend sandbox restricts sending to the verified account email only.
-  // Once pomeloenglish.com is verified in Resend, add pomeloenglish3300@gmail.com here.
+  // Resend sandbox restricts sending to the account's verified email only.
+  // This key belongs to the pomeloenglish3300@gmail.com Resend account.
   const notifyAddresses = [
-    'samisoverpowered@gmail.com',
+    'pomeloenglish3300@gmail.com',
   ];
 
   try {
