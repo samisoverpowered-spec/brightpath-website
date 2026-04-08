@@ -5,8 +5,7 @@ const path    = require('path');
 const stripe  = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const { Resend } = require('resend');
 
-const app    = express();
-const resend = new Resend(process.env.RESEND_API_KEY);
+const app = express();
 
 // ── Webhook must receive raw body BEFORE express.json() ──
 app.use('/api/webhook', express.raw({ type: 'application/json' }));
@@ -142,6 +141,7 @@ async function handlePaymentSuccess(session) {
 
   if (!email) { console.warn('⚠️  No customer email on session:', session.id); return; }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     await resend.emails.send({
       from:    'Pomelo English <hello@pomelo-english.com>',
